@@ -14,8 +14,7 @@ $language = get_bloginfo('language');
 <script src="<?php bloginfo('template_url');?>/js/modernizr.js" type="text/javascript" charset="utf-8"></script>
 
 </head>
-<?php $fundos = array('espaco', 'oceano', 'medieval', 'invaders', 'ghosts'); shuffle($fundos); ?>
-<?php //$fundos = array('ghosts'); ?>
+<?php $fundos = array('espaco', 'oceano', 'medieval', 'invaders'); shuffle($fundos); ?>
 <?php $fundo = $fundos[0]; ?>
 <body <?php body_class($fundo); ?>>
 <div id="backgrounds">
@@ -26,11 +25,6 @@ $language = get_bloginfo('language');
 	<img id="img_planeta_nw" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/espaco/planeta_nw.png" alt="Planeta NW" />
 	<img id="img_planeta_ne" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/espaco/planeta_ne.png" alt="Planeta NE" />
 	<img id="img_planeta_sw" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/espaco/planeta_sw.png" alt="Planeta SW" />
-<?php elseif($fundo == 'ghosts'):?>
-	<img id="img_ghost1" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/ghosts/ghost1.png" alt="Fantasma" />
-	<img id="img_ghost2" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/ghosts/ghost2.png" alt="Fantasma" />
-	<img id="img_ghost3" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/ghosts/ghost3.png" alt="Fantasma" />
-	<img id="img_ghost4" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/ghosts/ghost4.png" alt="Fantasma" />
 <?php elseif($fundo == 'oceano'):?>
 	<div id="img_ancora" class="parallax_bg"></div>
 	<img id="img_navio" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/oceano/navio.png" alt="Navio" />
@@ -70,9 +64,6 @@ $language = get_bloginfo('language');
 	<img id="img_warrior" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/medieval/warrior.png" alt="Guerreiro" />
 <?php endif;?>
 </div>
-<?php if($fundo == 'ghosts'):?>
-<div class="page-wrapper">
-<?php endif;?>
 <header id="header" class="container_12">
 	<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> - <small><?php bloginfo( 'description' ); ?></small></a></h1>
 </header>

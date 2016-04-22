@@ -416,59 +416,32 @@ dl.gallery-item
     right: 5%
     top: 90%
     z-index: 10
-  
+
   #img_nave
     left: -15%
     top: 50%
     z-index: 5
-  
+
   #img_sol
     right: -25px
     top: 40%
     z-index: 1
     +animation(sol-rotating 5s linear infinite)
-  
+
   #img_planeta_nw
     top: 0
     left: 0
     z-index: 2
-  
+
   #img_planeta_ne
     top: 0
     right: 0
     z-index: 3
-  
+
   #img_planeta_sw
     bottom: -50px
     left: 0
     z-index: 2
-
-.ghosts
-  .page-wrapper
-    overflow: hidden
-    background: image-url("../images/ghosts/bg.png") repeat-x bottom
-    width: 100%
-  #img_table
-    bottom: 0
-    margin-left: 100px
-  #img_trees
-    z-index: 10
-  #img_ghost1
-    bottom: 40%
-    left: 5%
-    +animation(ghost-1-moving 13s linear infinite)
-  #img_ghost2
-    bottom: 20%
-    left: 98%
-    +animation(ghost-2-moving 16s linear infinite)
-  #img_ghost3
-    top: 18%
-    left: 80%
-    +animation(ghost-2-moving 7s linear infinite)
-  #img_ghost4
-    top: 10%
-    left: 20%
-    +animation(ghost-1-moving 20s linear infinite)
 
 .invaders
   #img_city
@@ -476,7 +449,7 @@ dl.gallery-item
     width: 100%
     height: 485px
     background: image-url("invaders/city.png") repeat-x center
-  
+
   #img_city_middle
     position: absolute
     bottom: 0
@@ -835,49 +808,3 @@ dl.gallery-item
   100%
     +opacity(0)
     +transform(translate(80px, -460px))
-
-
-// ANIMATIONS GHOSTS
-+keyframes("ghost-1-moving")
-  0%
-    +transform(translate(0, 0))
-    +opacity(0)
-  10%
-    +opacity(1)
-    +transform(translate(0, -100px))
-  35%
-    +transform(translate(0, 100px))
-  60%
-    +transform(translate(0, -100px))
-  77%
-    +transform(translate(0, 100px))
-  90%
-    +opacity(1)
-  100%
-    left: 95%
-    +opacity(0)
-
-+keyframes("ghost-2-moving")
-  0%
-    +transform(translate(0, 0))
-    +opacity(0)
-  10%
-    +opacity(1)
-    +transform(translate(0, 100px))
-  35%
-    +transform(translate(0, -100px))
-  60%
-    +transform(translate(0, 100px))
-  77%
-    +transform(translate(0, -100px))
-  90%
-    +opacity(1)
-  100%
-    left: 5%
-    +opacity(0)
-
-+keyframes("evileyes-moving")
-  0%
-    background-position: 0 0
-  100% 
-    background-position: 0 600px
