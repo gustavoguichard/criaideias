@@ -3,10 +3,7 @@ global $language;
 $language = get_bloginfo('language');
 ?>
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js ie6" lang="pt-BR"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7" lang="pt-BR"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8" lang="pt-BR"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR"> <!--<![endif]-->
+<html class="no-js" lang="pt-BR">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <title><?php wp_title( '', true);?></title>

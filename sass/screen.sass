@@ -9,18 +9,11 @@ $grayLight: #aaa
 = keyframes($animation-name)
   @-webkit-keyframes #{$animation-name}
     @content
-  @-moz-keyframes #{$animation-name}
-    @content
-  @-o-keyframes #{$animation-name}
-    @content
   @keyframes #{$animation-name}
     @content
 
 =animation($values)
   -webkit-animation: $values
-  -moz-animation: $values
-  -ms-animation: $values
-  -o-animation: $values
   animation: $values
 
 = context($selector)
@@ -53,80 +46,76 @@ body
   &.espaco
     background: #1f0f31 image-url("../images/espaco/bg.gif") center top repeat-y fixed
     +animation(espaco-moving 60s linear infinite)
-  
+
   &.oceano
     background: #1b9bf4 image-url("oceano/bg.gif") center bottom repeat-x fixed
-  
+
   &.medieval
     background: #5fd6fe
 
   &.invaders
     background: #f7bca3 image-url("../images/invaders/bg.png") repeat-x bottom
 
-  &.ghosts
-    background: #001a1a image-url("../images/ghosts/evileyes.png") repeat top fixed
-    +animation(evileyes-moving 40s linear infinite)
-
-::selection 
+::selection
   background: #333
 
-::-moz-selection 
+::-moz-selection
   background: #333
 
 h1, h2, h3, h4, h5, h6,
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
   padding: 0 0 20px 0
   font-weight: bold
   text-decoration: none
   text-transform: lowercase
 
-h1, h2 
+h1, h2
   font-size: 27px
   letter-spacing: -1px
-h3 
+h3
   font-size: 18px
-h4 
+h4
   font-size: 16px
-h5 
+h5
   font-size: 15px
-h6 
+h6
   font-size: 12px
-p 
+p
   padding: 0 0 16px 0
 a
   text-decoration: none
   &:hover
     text-decoration: none
     color: black !important
-hr 
+hr
   background: none
   height: 1px
   line-height: 1px
   border: 0
   margin: 0 0 20px 0
-ul, ol  
-  margin: 0 20px 20px 0 
-  padding-left: 40px 
+ul, ol
+  margin: 0 20px 20px 0
+  padding-left: 40px
 blockquote
   margin: 0 0 0 40px
 strong, dfn
-  font-weight: bold 
-em, dfn  
-  font-style: italic 
-sup, sub  
+  font-weight: bold
+em, dfn
+  font-style: italic
+sup, sub
   line-height: 0
-pre   
-  white-space: pre 
-pre,code,tt  
+pre
+  white-space: pre
+pre,code,tt
   font-family: "Courier New", Courier, mono
   font-size: 12px
-dl  
-  margin: 0 0 20px 0 
-dl dt  
-  font-weight: bold 
-dd  
+dl
+  margin: 0 0 20px 0
+dl dt
+  font-weight: bold
+dd
   margin: 0 0 20px 20px
-small 
+small
   font-size: 75%
 
 .container_12
@@ -173,7 +162,7 @@ img.alignleft
       overflow: hidden
       background: image-url("logo.png") no-repeat center
       text-indent: -900%
-    
+
 #main
   background: rgba(255,255,255,.8)
   padding: 20px 20px 120px
@@ -184,7 +173,7 @@ img.alignleft
     position: absolute
     top: 10px
     left: 28px
-  
+
   ul.top-menu, ul.tags
     border-bottom: 2px dotted $grayLight
     width: 100%
@@ -193,7 +182,7 @@ img.alignleft
     overflow: hidden
     text-align: center
     padding-bottom: 12px
-    margin-bottom: 20px   
+    margin-bottom: 20px
     li
       display: inline
       font-size: 18px
@@ -211,7 +200,7 @@ img.alignleft
     position: relative
     top: -15px
     width: 940px
-    margin: 0 auto 20px    
+    margin: 0 auto 20px
     li
       font-size: 12px
       margin: 0 10px
@@ -219,7 +208,7 @@ img.alignleft
   #folio_container
     padding-top: 1px
     +legacy-pie-clearfix
-  
+
     div.post
       margin-bottom: 15px
       position: relative
@@ -245,7 +234,7 @@ img.alignleft
           z-index: 300
           +transition(all .5s)
           box-shadow: -1px 0 4px rgba(0,0,0,.5)
-            
+
         &:hover
           span
             left: 0
@@ -266,9 +255,6 @@ img.alignleft
     margin-bottom: 30px
     padding-bottom: 30px
 
-.ie8 #main, .ie7 #main, .ie6 #main
-  background: image-url("ie/white_80.png") center repeat
-
 section.criadores
   position: relative
   margin-top: 40px
@@ -279,12 +265,12 @@ section.criadores
     border: 2px solid black
     float: left
     background-repeat: no-repeat
-  
+
   a.criador_thumb
     width: 100px
     height: 100px
     margin: 0 10px 10px 0
- 
+
   .criador_bio
     display: block
     width: 440px
@@ -293,11 +279,11 @@ section.criadores
     z-index: 100
     overflow: hidden
     display: none
-    
+
     h3
       cursor: pointer
       width: 90%
-    
+
     article
       display: block
       height: 150px
@@ -332,67 +318,64 @@ section.criadores
     color: $grayLight - #666
     a
       color: $grayLight - #666
-  
+
   a
     color: white
     font-weight: bold
     text-decoration: underline
-  
+
   ul, ol
     padding: 0
     list-style: none
     text-transform: lowercase
-  
+
   h1, h2, h3, h4, h5, h6
     padding-bottom: 6px
-  
+
   .copyright
     position: relative
-    
+
     img#copy_logo
       position: absolute
       top: 20px
       right: 50px
 
-.ie8 #footer, .ie7 #footer, .ie6 #footer
-  background: image-url("ie/white_40.png") repeat
-
 /* Contact Form */
-form, form.wpcf7-form 
+form, form.wpcf7-form
   width: 60%
   border-bottom: 1px solid $grayLight
   padding-bottom: 15px
   margin-bottom: 20px
   overflow: hidden
-  
+
   .field
     padding: 0 0 15px 0
-  
-  label 
+
+  label
     display: block
     font-weight: bold
     padding: 10px 0 0 0
-  
-  .textbox, .textarea, .select, .button, .checkbox, .radio 
+
+  .textbox, .textarea, .select, .button, .checkbox, .radio
     padding: 8px 5px
-  
-  .checkbox, .radio 
+
+  .checkbox, .radio
     border: 0
-  
-  .button 
+
+  .button
     cursor: pointer
     padding: 5px 8px
     line-height: 100%
-  
-  .error 
+
+  .error
     padding: 1px 6px
     line-height: 100%
-  
+
   input[type=text], textarea
     width: 98%
     border: 2px solid $grayLight
     padding: 5px 3px
-  
+
   input.wpcf7-submit
     float: right
     color: white
@@ -402,7 +385,7 @@ form, form.wpcf7-form
     background: #fdcc44
     padding: 5px 20px
     box-shadow: 2px 2px 0 #f6a800
-    
+
     &:hover
       box-shadow: none
       position: relative
@@ -410,7 +393,7 @@ form, form.wpcf7-form
       right: -2px
       cursor: pointer
 
-.clearfix 
+.clearfix
   +legacy-pie-clearfix
 
 /* GALLERY */
@@ -418,7 +401,7 @@ dl.gallery-item
   float: left
   margin-right: 15px
   height: 150px
-  
+
   dd.wp-caption-text
     font-size: 75%
     margin: 0
@@ -585,39 +568,39 @@ dl.gallery-item
     background: image-url("oceano/ancora.png") left bottom repeat-x
     width: 100%
     height: 270px
-  
+
   #img_ancora, #img_coral_sw, #img_coral_se
     bottom: 0
     left: 0
     z-index: 10
-  
+
   #img_coral_se
     right: 0
     left: auto
-  
+
   #img_navio
     bottom: 100px
     left: 0
     z-index: 1
-  
+
   #img_aguas_vivas
     bottom: 20px
     right: 100%
     +animation(medusa-moving 40s linear infinite)
-  
+
   #img_tartaruga
     position: absolute
     left: 10px
     top: 45%
     z-index: 4
     +animation(tartaruga-moving 2s infinite)
-  
+
   #img_bolhas
     top: 30%
     left: 50%
     margin-left: -600px
     +animation(bubbles-moving 7s infinite)
-  
+
   #img_tubarao
     right: -250px
     top: 40%
@@ -631,47 +614,47 @@ dl.gallery-item
     z-index: 7
     width: 100%
     height: 214px
-  
+
   #img_colinas_bg
     background: image-url("medieval/colinas_bg.png") left bottom repeat-x
-  
+
   #img_colinas
     z-index: 10
     background: image-url("medieval/colinas.png") left bottom repeat-x
-  
+
   #img_warrior
     bottom: 80px
     left: 8%
     z-index: 15
     +animation(warrior-moving 2s infinite)
-  
+
   #img_yeti
     bottom: 160px
     right: 0
-  
+
   #img_montanha_bg
     left: 0
     bottom: 120px
-  
+
   #img_montanha
     left: 0
     bottom: 50px
     z-index: 5
-  
+
   #img_dragao
     right: 110%
     bottom: 0%
     z-index: 1
     +animation(dragao-moving 10s infinite)
-  
+
   #img_nuvens_left, #img_nuvens_right
     bottom: 240px
     z-index: 7
     +animation(nuvens-moving 40s linear infinite)
-  
+
   #img_nuvens_left
     left: 200px
-  
+
   #img_nuvens_right
     right: 10%
 
@@ -685,7 +668,7 @@ dl.gallery-item
 +keyframes("espaco-moving")
   0%
     background-position: 50% 0
-  100% 
+  100%
     background-position: 50% -1377px
 
 // ANIMATIONS OCEANO
