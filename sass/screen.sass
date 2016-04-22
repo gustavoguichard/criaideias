@@ -6,20 +6,6 @@
 $grayLight: #aaa
 
 // ANIMATION
-= keyframes($animation-name)
-  @-webkit-keyframes #{$animation-name}
-    @content
-  @keyframes #{$animation-name}
-    @content
-
-=animation($values)
-  -webkit-animation: $values
-  animation: $values
-
-= context($selector)
-  #{$selector} &
-    @content
-
 = decorative-content($position: after, $absolute: true)
   @if $absolute
     position: relative
@@ -31,21 +17,17 @@ $grayLight: #aaa
       position: absolute
     @content
 
-= absolute-centering($width: 0, $direction: left, $offset: 0)
-  #{$direction}: 50%
-  margin-#{$direction}: - ($width / 2) - $offset
-
 /* General Style Information */
 
 body
-  -webkit-background-clip: padding-box
+  background-clip: padding-box
   font-family: Helvetica, Arial, sans-serif
   font-size: 15px
   line-height: 22px
 
   &.espaco
     background: #1f0f31 image-url("../images/espaco/bg.gif") center top repeat-y fixed
-    +animation(espaco-moving 60s linear infinite)
+    animation: espaco-moving 60s linear infinite
 
   &.oceano
     background: #1b9bf4 image-url("oceano/bg.gif") center bottom repeat-x fixed
@@ -57,9 +39,6 @@ body
     background: #f7bca3 image-url("../images/invaders/bg.png") repeat-x bottom
 
 ::selection
-  background: #333
-
-::-moz-selection
   background: #333
 
 h1, h2, h3, h4, h5, h6,
@@ -232,7 +211,7 @@ img.alignleft
           line-height: 16px
           opacity: 0
           z-index: 300
-          +transition(all .5s)
+          transition: all .5s
           box-shadow: -1px 0 4px rgba(0,0,0,.5)
 
         &:hover
@@ -246,7 +225,7 @@ img.alignleft
           height: 100%
           background: white
           opacity: 0
-          +transition(all .3s)
+          transition: all .3s
           top: 0
           left: 0
 
@@ -314,7 +293,7 @@ section.criadores
   color: white
   padding: 40px 0
   text-transform: lowercase
-  +context(".invaders")
+  .invaders &
     color: $grayLight - #666
     a
       color: $grayLight - #666
@@ -426,7 +405,7 @@ dl.gallery-item
     right: -25px
     top: 40%
     z-index: 1
-    +animation(sol-rotating 5s linear infinite)
+    animation: sol-rotating 5s linear infinite
 
   #img_planeta_nw
     top: 0
@@ -481,60 +460,60 @@ dl.gallery-item
     right: 200px
     z-index: -1
     background: image-url("invaders/invader.png") no-repeat center top
-    +animation(tubarao-moving 4s infinite)
+    animation: tubarao-moving 4s infinite
 
   #img_abducted
     position: absolute
     bottom: 0
     left: 80px
-    +opacity(0)
-    +animation(abducting-house 10s ease-in infinite)
+    opacity: 0
+    animation: abducting-house 10s ease-in infinite
 
   #img_robot
     position: absolute
     z-index: -1
     bottom: 230px
-    +animation(robot-moving 3s ease-out infinite)
-    +transform-origin(50%, 100%)
+    animation: robot-moving 3s ease-out infinite
+    transform-origin: 50% 100%
 
   #img_dinosaur
     position: absolute
     right: 0
     z-index: -1
     bottom: 180px
-    +animation(robot-moving 5s 2s ease-in infinite)
-    +transform-origin(20%, 100%)
+    animation: robot-moving 5s 2s ease-in infinite
+    transform-origin: 20% 100%
 
   #img_top_clouds
     position: absolute
     top: 30px
     left: 40%
-    +animation(nuvens-moving-left 40s linear infinite)
+    animation: nuvens-moving-left 40s linear infinite
 
   #img_bottom_clouds
     right: 40%
     bottom: 380px
-    +animation(nuvens-moving-right 40s linear infinite)
+    animation: nuvens-moving-right 40s linear infinite
 
   #img_car_a, #img_car_b, #img_car_c, #img_car_d
     position: absolute
   #img_car_a
     left: 0
     bottom: 203px
-    +transform(rotate(31deg))
-    +opacity(0)
-    +animation(car-a 18s 12s linear infinite)
+    transform: rotate(31deg)
+    opacity: 0
+    animation: car-a 18s 12s linear infinite
   #img_car_b
     bottom: 190px
-    +animation(car-b 18s linear infinite)
+    animation: car-b 18s linear infinite
   #img_car_c
     bottom: 80px
     left: 1030px
-    +opacity(0)
-    +animation(car-c 18s 12s linear infinite)
+    opacity: 0
+    animation: car-c 18s 12s linear infinite
   #img_car_d
     bottom: 130px
-    +animation(car-d 18s linear infinite)
+    animation: car-d 18s linear infinite
 
 .oceano
   #img_ancora
@@ -559,26 +538,26 @@ dl.gallery-item
   #img_aguas_vivas
     bottom: 20px
     right: 100%
-    +animation(medusa-moving 40s linear infinite)
+    animation: medusa-moving 40s linear infinite
 
   #img_tartaruga
     position: absolute
     left: 10px
     top: 45%
     z-index: 4
-    +animation(tartaruga-moving 2s infinite)
+    animation: tartaruga-moving 2s infinite
 
   #img_bolhas
     top: 30%
     left: 50%
     margin-left: -600px
-    +animation(bubbles-moving 7s infinite)
+    animation: bubbles-moving 7s infinite
 
   #img_tubarao
     right: -250px
     top: 40%
     z-index: 3
-    +animation(tubarao-moving 4s infinite)
+    animation: tubarao-moving 4s infinite
 
 .medieval
   #img_colinas, #img_colinas_bg
@@ -599,7 +578,7 @@ dl.gallery-item
     bottom: 80px
     left: 8%
     z-index: 15
-    +animation(warrior-moving 2s infinite)
+    animation: warrior-moving 2s infinite
 
   #img_yeti
     bottom: 160px
@@ -618,12 +597,12 @@ dl.gallery-item
     right: 110%
     bottom: 0%
     z-index: 1
-    +animation(dragao-moving 10s infinite)
+    animation: dragao-moving 10s infinite
 
   #img_nuvens_left, #img_nuvens_right
     bottom: 240px
     z-index: 7
-    +animation(nuvens-moving 40s linear infinite)
+    animation: nuvens-moving 40s linear infinite
 
   #img_nuvens_left
     left: 200px
@@ -632,179 +611,179 @@ dl.gallery-item
     right: 10%
 
 // ANIMATIONS ESPACO
-+keyframes("sol-rotating")
+@keyframes "sol-rotating"
   0%
-    +transform(rotate(0deg))
+    transform: rotate(0deg)
   100%
-    +transform(rotate(360deg))
+    transform: rotate(360deg)
 
-+keyframes("espaco-moving")
+@keyframes "espaco-moving"
   0%
     background-position: 50% 0
   100%
     background-position: 50% -1377px
 
 // ANIMATIONS OCEANO
-+keyframes("tartaruga-moving")
+@keyframes "tartaruga-moving"
   0%
-    +transform(translate(0px, -20px))
+    transform: translate(0px, -20px)
   45%
-    +transform(translate(0px, 20px))
+    transform: translate(0px, 20px)
   100%
-    +transform(translate(0px, -20px))
+    transform: translate(0px, -20px)
 
-+keyframes("bubbles-moving")
+@keyframes "bubbles-moving"
   0%
-    +opacity(.1)
+    opacity: .1
     top: 100%
   100%
-    +opacity(1)
+    opacity: 1
     top: -50%
 
-+keyframes("medusa-moving")
+@keyframes "medusa-moving"
   0%
-    +transform(translate(0px, -20px))
+    transform: translate(0px, -20px)
     right: 100%
-    +opacity(0)
+    opacity: 0
   80%
-    +transform(translate(0px, -20px))
+    transform: translate(0px, -20px)
     right: 100%
-    +opacity(1)
+    opacity: 1
   96%
-    +transform(translate(0px, -420px))
+    transform: translate(0px, -420px)
     right: 5%
-    +opacity(1)
+    opacity: 1
   100%
-    +transform(translate(0px, -550px))
+    transform: translate(0px, -550px)
     right: -20%
-    +opacity(0)
+    opacity: 0
 
-+keyframes("tubarao-moving")
+@keyframes "tubarao-moving"
   0%
-    +transform(translate(0px, -7px))
+    transform: translate(0px, -7px)
   50%
-    +transform(translate(0px, 7px))
+    transform: translate(0px, 7px)
   100%
-    +transform(translate(0px, -7px))
+    transform: translate(0px, -7px)
 
 // ANIMATIONS MEDIEVAL
-+keyframes("nuvens-moving")
+@keyframes "nuvens-moving"
   0%
-    +opacity(0)
+    opacity: 0
   10%
-    +transform(translate(0, 0))
-    +opacity(1)
+    transform: translate(0, 0)
+    opacity: 1
   75%
-    +transform(translate(0, -300px))
-    +opacity(1)
+    transform: translate(0, -300px)
+    opacity: 1
   100%
-    +transform(translate(0, -400px))
-    +opacity(0)
+    transform: translate(0, -400px)
+    opacity: 0
 
-+keyframes("warrior-moving")
+@keyframes "warrior-moving"
   80%
-    +transform(translate(0, 0))
+    transform: translate(0, 0)
   90%
-    +transform(translate(0, -4px))
+    transform: translate(0, -4px)
   100%
-    +transform(translate(0, 0))
+    transform: translate(0, 0)
 
 // ANIMATIONS INVADERS
-+keyframes("nuvens-moving-left")
+@keyframes "nuvens-moving-left"
   0%
-    +transform(translate(0, 0))
-    +opacity(0)
+    transform: translate(0, 0)
+    opacity: 0
   10%
-    +opacity(1)
+    opacity: 1
   75%
-    +transform(translate(-300px, 0))
-    +opacity(1)
+    transform: translate(-300px, 0)
+    opacity: 1
   100%
-    +transform(translate(-400px, 0))
-    +opacity(0)
+    transform: translate(-400px, 0)
+    opacity: 0
 
-+keyframes("nuvens-moving-right")
+@keyframes "nuvens-moving-right"
   0%
-    +transform(translate(0, 0))
-    +opacity(0)
+    transform: translate(0, 0)
+    opacity: 0
   10%
-    +opacity(1)
+    opacity: 1
   75%
-    +transform(translate(300px, 0))
-    +opacity(1)
+    transform: translate(300px, 0)
+    opacity: 1
   100%
-    +transform(translate(400px, 0))
-    +opacity(0)
+    transform: translate(400px, 0)
+    opacity: 0
 
-+keyframes("car-a")
+@keyframes "car-a"
   0%
-    +opacity(0)
+    opacity: 0
   5%
-    +opacity(1)
+    opacity: 1
   15%
-    +transform(translate(180px, 105px) rotate(31deg))
+    transform: translate(180px, 105px) rotate(31deg)
   16%
-    +transform(translate(180px, 105px) rotate(0))
+    transform: translate(180px, 105px) rotate(0)
   95%
-    +opacity(1)
+    opacity: 1
   100%
-    +transform(translate(1100px, 105px))
-    +opacity(0)
+    transform: translate(1100px, 105px)
+    opacity: 0
 
 
-+keyframes("car-b")
+@keyframes "car-b"
   0%
-    +opacity(0)
+    opacity: 0
   5%
-    +opacity(1)
+    opacity: 1
   15%
-    +transform(translate(180px, 105px))
+    transform: translate(180px, 105px)
   16%
-    +transform(translate(180px, 105px) rotate(-32deg))
+    transform: translate(180px, 105px) rotate(-32deg)
   95%
-    +opacity(1)
+    opacity: 1
   100%
-    +transform(translate(1100px, 105px) rotate(-32deg))
-    +opacity(0)
+    transform: translate(1100px, 105px) rotate(-32deg)
+    opacity: 0
 
-+keyframes("car-c")
+@keyframes "car-c"
   0%
-    +opacity(0)
+    opacity: 0
   5%
-    +opacity(1)
+    opacity: 1
   84%
-    +transform(translate(-930px, 0))
+    transform: translate(-930px, 0)
   85%
-    +transform(translate(-930px, 0) rotate(10deg))
-    +opacity(1)
+    transform: translate(-930px, 0) rotate(10deg)
+    opacity: 1
   100%
-    +transform(translate(-1100px, -95px) rotate(32deg))
-    +opacity(0)
+    transform: translate(-1100px, -95px) rotate(32deg)
+    opacity: 0
 
-+keyframes("car-d")
+@keyframes "car-d"
   0%
-    +transform(translate(1100px, 60px) rotate(-30deg))
-    +opacity(0)
+    transform: translate(1100px, 60px) rotate(-30deg)
+    opacity: 0
   5%
-    +opacity(1)
+    opacity: 1
   84%
-    +transform(translate(180px, 60px) rotate(-30deg))
+    transform: translate(180px, 60px) rotate(-30deg)
   85%
-    +transform(translate(180px, 60px) rotate(-10deg))
-    +opacity(1)
+    transform: translate(180px, 60px) rotate(-10deg)
+    opacity: 1
   100%
-    +transform(translate(0, 0) rotate(0))
-    +opacity(0)
+    transform: translate(0, 0) rotate(0)
+    opacity: 0
 
-+keyframes("robot-moving")
+@keyframes "robot-moving"
   50%
-    +transform(rotate(4deg))
+    transform: rotate(4deg)
 
-+keyframes("abducting-house")
+@keyframes "abducting-house"
   10%
-    +opacity(1)
+    opacity: 1
   90%
-    +opacity(1)
+    opacity: 1
   100%
-    +opacity(0)
-    +transform(translate(80px, -460px))
+    opacity: 0
+    transform: translate(80px, -460px)
