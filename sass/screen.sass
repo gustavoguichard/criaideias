@@ -5,18 +5,6 @@
 
 $grayLight: #aaa
 
-// ANIMATION
-= decorative-content($position: after, $absolute: true)
-  @if $absolute
-    position: relative
-
-  &:#{$position}
-    content: ""
-    display: block
-    @if $absolute
-      position: absolute
-    @content
-
 /* General Style Information */
 
 body
@@ -195,9 +183,23 @@ img.alignleft
       width: 220px
       overflow: hidden
       &:hover
-        box-shadow: 0 0 1px rgba(0,0,0,1), 0 0 1px rgba(0,0,0,1), 0 0 1px rgba(0,0,0,1)
+        box-shadow: 0 0 1px rgba(black, 1)
 
       a
+        position: relative
+
+        &:after
+          background: white
+          content: ""
+          display: block
+          height: 100%
+          left: 0
+          opacity: 0
+          position: absolute
+          top: 0
+          transition: all .3s
+          width: 100%
+
         span
           position: absolute
           bottom: 0
@@ -212,22 +214,14 @@ img.alignleft
           opacity: 0
           z-index: 300
           transition: all .5s
-          box-shadow: -1px 0 4px rgba(0,0,0,.5)
+          box-shadow: -1px 0 4px rgba(black, .5)
 
         &:hover
           span
             left: 0
             opacity: 1
-          &::after
+          &:after
             opacity: .15
-        +decorative-content
-          width: 100%
-          height: 100%
-          background: white
-          opacity: 0
-          transition: all .3s
-          top: 0
-          left: 0
 
   img.attachment-page-thumb
     border-bottom: 2px dotted $grayLight
