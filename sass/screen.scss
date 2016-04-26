@@ -185,11 +185,17 @@ img.alignleft {
   padding: 20px 20px 120px;
   overflow: hidden;
   position: relative;
+
+  iframe {
+    max-width: 100%;
+  }
+
   aside.flags {
     position: absolute;
     top: 2px;
     left: 5px;
   }
+
   ul.top-menu, ul.tags {
     border-bottom: 2px dotted $grayLight;
     width: 100%;
