@@ -69,7 +69,7 @@ $language = get_bloginfo('language');
 </header>
 <div id="main" class="container_12">
 	<aside class="flags">
-		<a href="/language/pt/"><img src="<?php bloginfo('template_url');?>/images/brazil-flag.png" alt="Site em português" class="flag"></a>
+		<a href="/"><img src="<?php bloginfo('template_url');?>/images/brazil-flag.png" alt="Site em português" class="flag"></a>
 		<a href="/language/en/"><img src="<?php bloginfo('template_url');?>/images/uk-flag.png" alt="Website in english" class="flag"></a>
 		<a href="/language/es/"><img src="<?php bloginfo('template_url');?>/images/spain-flag.png" alt="Sitio en español" class="flag"></a>
 	</aside>
