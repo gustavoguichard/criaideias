@@ -406,7 +406,7 @@ form, form.wpcf7-form {
     padding: 1px 6px;
     line-height: 100%;
   }
-  input[type=text], textarea {
+  input[type=text], input[type=email], textarea {
     width: 98%;
     border: 2px solid $grayLight;
     padding: 5px 3px;
