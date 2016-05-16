@@ -13,4 +13,4 @@
 			<span><?php the_title();?></span>
 		</a>
 	</div>
-<?php endwhile; // End the loop. Whew. ?>
+<?php endwhile; ?>
