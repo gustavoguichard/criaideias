@@ -254,6 +254,7 @@ img.alignleft {
       }
       a {
         position: relative;
+        display: block;
         &:after {
           background: white;
           content: "";
