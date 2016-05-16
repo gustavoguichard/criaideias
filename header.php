@@ -64,7 +64,7 @@ $language = get_bloginfo('language');
 	<img id="img_warrior" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/medieval/warrior.png" alt="Guerreiro" />
 <?php endif;?>
 </div>
-<header id="header" class="container">
+<header id="header">
 	<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> - <small><?php bloginfo( 'description' ); ?></small></a></h1>
 </header>
 <div class="container">
@@ -75,8 +75,4 @@ $language = get_bloginfo('language');
     		<a href="/language/en/"><img src="<?php bloginfo('template_url');?>/images/uk-flag.png" alt="Website in english" class="flag"></a>
     		<a href="/language/es/"><img src="<?php bloginfo('template_url');?>/images/spain-flag.png" alt="Sitio en español" class="flag"></a>
     	</aside>
-      <div class="row">
-      	<div class="col-xs-12">
-      	<?php wp_nav_menu( array( 'menu_class' => 'top-menu', 'theme_location' => 'top_menu', 'container' => 'ul') ); ?>
-      	</div>
-      </div>
+    	<?php wp_nav_menu( array( 'menu_class' => 'top-menu', 'theme_location' => 'top_menu', 'container' => 'ul') ); ?>
