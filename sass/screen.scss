@@ -249,7 +249,7 @@ img.alignleft {
       &:hover {
         box-shadow: 0 0 1px rgba(black, 1);
       }
-      a {
+      .thumb-link {
         background-position: 50% 25%;
         background-size: cover;
         display: block;
@@ -291,6 +291,19 @@ img.alignleft {
           }
           &:after {
             opacity: 0.15;
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        .thumb-link {
+          height: 260px;
+          margin-bottom: 50px;
+          overflow: visible;
+
+          span {
+            bottom: -30px;
+            left: 0;
+            opacity: 1;
           }
         }
       }
