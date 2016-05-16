@@ -20,7 +20,7 @@
 			<li><a href="<?php bloginfo('url');?>/tag/<?=$tag->slug;?>" rel="tag-<?=$tag->slug;?>" title="Filtrar portfólio"><?=$tag_readable;?></a></li>
 		<?php endforeach;?>
 	</ul>
-	<article id="folio_container row">
+	<article id="folio_container" class="row">
   <?php query_posts(array($query_string, 'showposts'=>'-1', 'post_type'=>'post', 'orderby'=>'menu_order', 'order'=>'ASC'));?>
 	<?php get_template_part( 'loop', 'index' ); ?>
 	</article>
