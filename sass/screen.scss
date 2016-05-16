@@ -222,10 +222,9 @@ img.alignleft {
     }
   }
   ul.tags {
-    padding-bottom: 5px;
+    padding: 5px 10px;
     position: relative;
     top: -15px;
-    width: 940px;
     margin: 0 auto 20px;
     li {
       font-size: 12px;
@@ -233,13 +232,11 @@ img.alignleft {
     }
   }
   #folio_container {
-    padding-top: 1px;
-    @include pie-clearfix;
+
     div.post {
       margin-bottom: 15px;
       position: relative;
       height: 140px;
-      width: 220px;
       overflow: hidden;
       &:hover {
         box-shadow: 0 0 1px rgba(black, 1);
