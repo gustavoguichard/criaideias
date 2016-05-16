@@ -182,7 +182,8 @@ img.alignleft {
 
 #main {
   background: rgba(255, 255, 255, 0.8);
-  padding: 20px 20px 120px;
+  padding-top: 20px;
+  padding-bottom: 120px;
   overflow: hidden;
   position: relative;
 
@@ -231,6 +232,7 @@ img.alignleft {
       margin: 0 10px;
     }
   }
+
   #folio_container {
 
     div.post {

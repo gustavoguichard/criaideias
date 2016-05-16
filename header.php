@@ -75,6 +75,8 @@ $language = get_bloginfo('language');
     		<a href="/language/en/"><img src="<?php bloginfo('template_url');?>/images/uk-flag.png" alt="Website in english" class="flag"></a>
     		<a href="/language/es/"><img src="<?php bloginfo('template_url');?>/images/spain-flag.png" alt="Sitio en español" class="flag"></a>
     	</aside>
-    	<div class="col-xs-12">
-    	<?php wp_nav_menu( array( 'menu_class' => 'top-menu', 'theme_location' => 'top_menu', 'container' => 'ul') ); ?>
-    	</div>
+      <div class="row">
+      	<div class="col-xs-12">
+      	<?php wp_nav_menu( array( 'menu_class' => 'top-menu', 'theme_location' => 'top_menu', 'container' => 'ul') ); ?>
+      	</div>
+      </div>
