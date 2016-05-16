@@ -161,6 +161,10 @@ img.alignleft {
   left: 0;
   right: 0;
   overflow: hidden;
+
+  @media (max-width: 560px) {
+    display: none;
+  }
 }
 
 #header {
@@ -216,10 +220,11 @@ img.alignleft {
     padding-bottom: 12px;
     margin-bottom: 20px;
     li {
-      display: inline;
+      display: inline-block;
       font-size: 18px;
       font-weight: bold;
-      margin: 0 30px;
+      margin: 0 23px;
+      padding: 5px;
       text-transform: lowercase;
       a {
         color: $grayLight - #333333;
@@ -314,6 +319,16 @@ img.alignleft {
     border-bottom: 2px dotted $grayLight;
     margin-bottom: 30px;
     padding-bottom: 30px;
+  }
+
+  @media (max-width: 480px) {
+    ul.tags li {
+      display: block;
+    }
+
+    #footer {
+      text-align: center;
+    }
   }
 }
 
