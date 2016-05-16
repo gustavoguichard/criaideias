@@ -246,15 +246,16 @@ img.alignleft {
 
     div.post {
       margin-bottom: 15px;
-      position: relative;
-      height: 140px;
-      overflow: hidden;
       &:hover {
         box-shadow: 0 0 1px rgba(black, 1);
       }
       a {
-        position: relative;
+        background-position: 50% 25%;
+        background-size: cover;
         display: block;
+        height: 220px;
+        overflow: hidden;
+        position: relative;
         &:after {
           background: white;
           content: "";
