@@ -15,9 +15,9 @@
 get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-	<div class="grid_12">
+	<div class="col-xs-12">
 		<?php the_post_thumbnail('page-thumb');?>
     <?php the_content();?>
-  </div><!--//grid_12-->
+  </div>
 <?php endwhile; ?>
 <?php get_footer(); ?>

@@ -10,7 +10,7 @@
 get_header(); ?>
 
 
-	<div class="grid_12">
+	<div class="col-xs-12">
 		<h3>Nada encontrado</h3>
 		<p>Desculpe, mas esta página não existe ou não pode ser encontrada. Tente <a href="<?php echo bloginfo('url');?>">voltar para a Home</a> e começar de novo…</p>
   </div>

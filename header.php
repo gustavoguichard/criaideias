@@ -64,15 +64,17 @@ $language = get_bloginfo('language');
 	<img id="img_warrior" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/medieval/warrior.png" alt="Guerreiro" />
 <?php endif;?>
 </div>
-<header id="header" class="container_12">
+<header id="header" class="container">
 	<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> - <small><?php bloginfo( 'description' ); ?></small></a></h1>
 </header>
-<div id="main" class="container_12">
-	<aside class="flags">
-		<a href="/"><img src="<?php bloginfo('template_url');?>/images/brazil-flag.png" alt="Site em português" class="flag"></a>
-		<a href="/language/en/"><img src="<?php bloginfo('template_url');?>/images/uk-flag.png" alt="Website in english" class="flag"></a>
-		<a href="/language/es/"><img src="<?php bloginfo('template_url');?>/images/spain-flag.png" alt="Sitio en español" class="flag"></a>
-	</aside>
-	<div class="grid_12">
-	<?php wp_nav_menu( array( 'menu_class' => 'top-menu', 'theme_location' => 'top_menu', 'container' => 'ul') ); ?>
-	</div>
+<div class="container">
+  <div class="row">
+    <div id="main" class="col-md-10 col-md-offset-1">
+    	<aside class="flags">
+    		<a href="/"><img src="<?php bloginfo('template_url');?>/images/brazil-flag.png" alt="Site em português" class="flag"></a>
+    		<a href="/language/en/"><img src="<?php bloginfo('template_url');?>/images/uk-flag.png" alt="Website in english" class="flag"></a>
+    		<a href="/language/es/"><img src="<?php bloginfo('template_url');?>/images/spain-flag.png" alt="Sitio en español" class="flag"></a>
+    	</aside>
+    	<div class="col-xs-12">
+    	<?php wp_nav_menu( array( 'menu_class' => 'top-menu', 'theme_location' => 'top_menu', 'container' => 'ul') ); ?>
+    	</div>

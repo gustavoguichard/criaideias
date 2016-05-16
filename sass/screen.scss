@@ -1,6 +1,6 @@
 @import "compass/reset";
-@import "960";
 @import "compass/utilities/general";
+@import "bootstrap-grid";
 
 $grayLight: #aaaaaa;
 
@@ -125,11 +125,6 @@ small {
   font-size: 75%;
 }
 
-.container_12 {
-  position: relative;
-  z-index: 50;
-}
-
 img.alignright {
   float: right;
   margin: 0 0 10px 10px;
@@ -178,6 +173,11 @@ img.alignleft {
       text-indent: -900%;
     }
   }
+}
+
+.container {
+  position: relative;
+  z-index: 50;
 }
 
 #main {
@@ -286,6 +286,7 @@ img.alignleft {
       }
     }
   }
+
   img.attachment-page-thumb {
     border-bottom: 2px dotted $grayLight;
     margin-bottom: 30px;

@@ -9,13 +9,13 @@
 
 get_header(); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-	<div class="grid_12">
+	<div class="col-xs-12">
 		<?php the_post_thumbnail('page-thumb');?>
 	</div>
-	<div class="grid_6">
+	<div class="col-md-6">
 		<?php the_content();?>
 	</div>
-	<div class="grid_6">
+	<div class="col-md-6">
 		<section class="criadores">
 			<?php $my_query = new WP_Query('showposts=-1&post_type=criador&orderby=menu_order&order=ASC'); ?>
 			<?php if($my_query->have_posts()) : ?><?php while($my_query->have_posts()) : $my_query->the_post(); ?>
