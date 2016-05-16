@@ -125,6 +125,11 @@ small {
   font-size: 75%;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 img.alignright {
   float: right;
   margin: 0 0 10px 10px;
@@ -296,6 +301,8 @@ img.alignleft {
 section.criadores {
   position: relative;
   margin-top: 40px;
+  min-height: 280px;
+
   a.criador_thumb, a.criador_foto {
     text-indent: -900%;
     overflow: hidden;
@@ -384,7 +391,7 @@ section.criadores {
 
 /* Contact Form */
 form, form.wpcf7-form {
-  width: 60%;
+  max-width: 550px;
   border-bottom: 1px solid $grayLight;
   padding-bottom: 15px;
   margin-bottom: 20px;
