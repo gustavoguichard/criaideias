@@ -14,7 +14,11 @@ $language = get_bloginfo('language');
 <link type="text/css" rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/print.css" media="print" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <script src="<?php bloginfo('template_url');?>/js/modernizr.js" type="text/javascript" charset="utf-8"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<?php if(is_home()):?>
+<script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.quicksand.js"></script>
+<?php endif;?>
+<script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/cria_general.js"></script>
 </head>
 <?php $fundos = array('espaco', 'oceano', 'medieval', 'invaders'); shuffle($fundos); ?>
 <?php $fundo = $fundos[0]; ?>

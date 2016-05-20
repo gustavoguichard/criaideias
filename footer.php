@@ -27,12 +27,7 @@
     </div>
   </div>
 </footer><!-- //footer -->
-<script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery-1.6.2.min.js"></script>
-<?php if(is_home()):?>
-<script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.quicksand.js"></script>
-<?php endif;?>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/cria_general.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/cria_parallax.js"></script>
 <?php	wp_footer(); ?>
 </body>
