@@ -598,6 +598,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/menu-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17691,
+		"inputAbbreviatedPath": "\/images\/menu-icon.png",
+		"outputAbbreviatedPath": "\/images\/menu-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/oceano\/aguas_vivas.png": {
 		"fileType": 32768,
 		"ignore": 0,

@@ -267,7 +267,7 @@ img.alignleft {
     display: none;
 
     @media (max-width: 768px) {
-      background-color: rgba(255, 255, 255, 0.8);
+      background: image-url("menu-icon.png") no-repeat center;
       border-radius: 3px;
       display: block;
       height: 40px;
@@ -288,6 +288,14 @@ img.alignleft {
     li {
       font-size: 12px;
       margin: 0 10px;
+    }
+
+    @media (max-width: 640px) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 25px;
     }
   }
 
@@ -365,15 +373,6 @@ img.alignleft {
     padding-bottom: 30px;
   }
 
-  @media (max-width: 640px) {
-    ul.tags {
-      display: none;
-    }
-
-    #footer {
-      text-align: center;
-    }
-  }
 }
 
 section.criadores {
@@ -438,6 +437,11 @@ section.criadores {
   color: white;
   padding: 40px 0;
   text-transform: lowercase;
+
+  @media (max-width: 640px) {
+    text-align: center;
+  }
+
   .invaders & {
     color: $grayLight - #666666;
     a {
