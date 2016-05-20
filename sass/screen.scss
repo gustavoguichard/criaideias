@@ -267,9 +267,15 @@ img.alignleft {
     display: none;
 
     @media (max-width: 768px) {
-      background-color: red;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 3px;
       display: block;
       height: 40px;
+      left: 10px;
+      overflow: hidden;
+      position: fixed;
+      text-indent: -999em;
+      top: 10px;
       width: 40px;
     }
   }
