@@ -275,8 +275,13 @@ img.alignleft {
       overflow: hidden;
       position: fixed;
       text-indent: -999em;
+      transition: left .5s;
       top: 10px;
       width: 40px;
+    }
+
+    .menu-open & {
+      left: 310px;
     }
   }
 
