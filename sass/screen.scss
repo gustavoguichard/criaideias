@@ -189,6 +189,13 @@ img.alignleft {
   z-index: 50;
 }
 
+aside.flags {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
 #main {
   background: rgba(255, 255, 255, 0.8);
   padding-top: 20px;
@@ -198,13 +205,6 @@ img.alignleft {
 
   iframe {
     max-width: 100%;
-  }
-
-  aside.flags {
-    position: absolute;
-    top: 2px;
-    left: 5px;
-    z-index: 10;
   }
 
   ul.top-menu, ul.tags {
@@ -265,10 +265,14 @@ img.alignleft {
   }
 
   .mobile-menu-link {
+    background: image-url("menu-icon.png") no-repeat center;
     display: none;
 
+    .espaco & {
+      background-image: image-url("menu-icon-white.png");
+    }
+
     @media (max-width: 768px) {
-      background: image-url("menu-icon.png") no-repeat center;
       border-radius: 3px;
       display: block;
       height: 40px;
@@ -445,7 +449,7 @@ section.criadores {
   padding: 40px 0;
   text-transform: lowercase;
 
-  @media (max-width: 640px) {
+  @media (max-width: 989px) {
     text-align: center;
   }
 
