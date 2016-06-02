@@ -8,7 +8,7 @@
 <?php while ( have_posts() ) : the_post(); ?>
 <?php $terms = get_the_terms( $post->ID, 'post_tag' );?>
 <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-	<div <?php post_class('col-md-4 col-sm-6'); ?> data-id="id-<?=$post->ID;?>">
+	<div <?php post_class('col-md-3 col-sm-4 col-xs-6'); ?> data-id="id-<?=$post->ID;?>">
 		<a class="thumb-link fancybox fancybox.iframe" href="<?php the_permalink();?>" title="<?php the_title();?>" class="iframe-single" style="background-image: url(<?=$url?>);">
 			<span><?php the_title();?></span>
 		</a>
