@@ -1,5 +1,7 @@
 $(function() {
 
+  $(".fancybox").fancybox();
+
   $('.criador_thumb').on('click', function(e){
     $('.criador_thumb').fadeOut();
     $('.criador_bio', $(this).parent()).slideDown();
