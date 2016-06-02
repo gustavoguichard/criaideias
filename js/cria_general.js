@@ -9,7 +9,7 @@ $(function() {
   });
 
   $('.criador_bio a.criador_foto, .criador_bio a.close_criador, .criador_bio h3').on('click', function(e){
-    $(this).parents('.criador_bio').slideUp();
+    $(this).parents('.criador_bio').fadeOut();
     $('.criador_thumb').fadeIn();
   	e.preventDefault();
   });
