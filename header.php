@@ -69,13 +69,15 @@ $language = get_bloginfo('language');
 <header id="header">
 	<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> - <small><?php bloginfo( 'description' ); ?></small></a></h1>
 </header>
-<aside class="flags">
-	<a href="/"><img src="<?php bloginfo('template_url');?>/images/brazil-flag.png" alt="Site em português" class="flag"></a>
-	<a href="/language/en/"><img src="<?php bloginfo('template_url');?>/images/uk-flag.png" alt="Website in english" class="flag"></a>
-	<a href="/language/es/"><img src="<?php bloginfo('template_url');?>/images/spain-flag.png" alt="Sitio en español" class="flag"></a>
-</aside>
 <div class="container">
   <div class="row">
     <div id="main" class="col-md-10 col-md-offset-1">
-    	<?php wp_nav_menu( array( 'menu_class' => 'top-menu', 'theme_location' => 'top_menu', 'container' => 'ul') ); ?>
-      <a href="#" class="mobile-menu-link">Open</a>
+      <div class="top-menu">
+        <aside class="flags">
+          <a href="/"><img src="<?php bloginfo('template_url');?>/images/brazil-flag.png" alt="Site em português" class="flag"></a>
+          <a href="/language/en/"><img src="<?php bloginfo('template_url');?>/images/uk-flag.png" alt="Website in english" class="flag"></a>
+          <a href="/language/es/"><img src="<?php bloginfo('template_url');?>/images/spain-flag.png" alt="Sitio en español" class="flag"></a>
+        </aside>
+      	<?php wp_nav_menu( array( 'menu_class' => 'top-menu-list', 'theme_location' => 'top_menu', 'container' => 'ul') ); ?>
+        <a href="#" class="mobile-menu-link">Open</a>
+      </div>
