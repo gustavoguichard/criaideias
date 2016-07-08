@@ -20,4 +20,8 @@ $(function() {
     e.preventDefault();
   });
 
+  $('.menu-shadow').on('click', function() {
+    $('body').removeClass('menu-open');
+  });
+
 });

@@ -216,6 +216,7 @@ aside.flags {
     text-align: center;
     padding-bottom: 12px;
     margin-bottom: 20px;
+
     li {
       display: inline-block;
       font-size: 18px;
@@ -223,9 +224,11 @@ aside.flags {
       margin: 0 16px;
       padding: 5px;
       text-transform: lowercase;
+
       a {
         color: $grayLight - #333333;
       }
+
       &.current-menu-item, &.current_page_item, &.active {
         a {
           color: black;
@@ -234,25 +237,53 @@ aside.flags {
     }
   }
 
+  .top-menu-list {
+    margin: 0;
+    padding: 0;
+  }
+
   .top-menu {
     padding-top: 15px;
 
     @media (max-width: 768px) {
       background: rgba(0,0,0,.85);
-      left: -300px;
+      left: -200px;
       overflow: visible;
       padding-top: 0;
       position: fixed;
       top: 0;
       transition: left .5s;
-      width: 300px;
+      width: 200px;
       z-index: 10000;
+
       li {
         display: block;
+        margin: 0;
+        padding: 0;
         text-align: left;
-        &.current-menu-item, &.current_page_item, &.active {
+        text-transform: none;
+
+        a {
+          color: white;
+          display: block;
+          padding: 8px 20px 8px 30px;
+        }
+
+        &.current-menu-item, &.current_page_item, &.active, &:hover {
           a {
-            color: white;
+            color: white !important;
+            position: relative;
+
+            &:before {
+              background: #fdcc44;
+              bottom: 0;
+              content: "";
+              display: block;
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 10px;
+            }
           }
         }
       }
@@ -264,6 +295,10 @@ aside.flags {
       .flags {
         margin-bottom: 16px;
         position: relative;
+
+        img {
+          width: 30px;
+        }
       }
     }
   }
@@ -365,6 +400,23 @@ aside.flags {
     padding-bottom: 30px;
   }
 
+}
+
+.menu-shadow {
+  background: rgba(0,0,0,.3);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all .3s;
+  z-index: -1;
+
+  .menu-open & {
+    opacity: 1;
+    z-index: 900;
+  }
 }
 
 section.criadores {

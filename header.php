@@ -81,3 +81,5 @@ $language = get_bloginfo('language');
       	<?php wp_nav_menu( array( 'menu_class' => 'top-menu-list', 'theme_location' => 'top_menu', 'container' => 'ul') ); ?>
         <a href="#" class="mobile-menu-link">Open</a>
       </div>
+      <div class="menu-shadow"></div>
+
