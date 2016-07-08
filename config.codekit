@@ -29,17 +29,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/cria_parallax-ck.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cria_parallax-ck.js",
-		"outputAbbreviatedPath": "\/min\/cria_parallax-ck-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/css\/bootstrap-grid.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -939,17 +928,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/fancybox\/source\/jquery.fancybox.pack.js",
 		"outputAbbreviatedPath": "\/js\/fancybox\/source\/min\/jquery.fancybox.pack-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/jquery.quicksand.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/jquery.quicksand.js",
-		"outputAbbreviatedPath": "\/js\/min\/jquery.quicksand-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

@@ -28,9 +28,6 @@
   </div>
 </footer><!-- //footer -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-<?php if(is_home()):?>
-<script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.quicksand.js"></script>
-<?php endif;?>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/cria_general.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/cria_parallax.js"></script>
