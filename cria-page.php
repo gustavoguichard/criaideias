@@ -9,9 +9,7 @@
 
 get_header(); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-	<div class="col-xs-12">
-		<?php the_post_thumbnail('page-thumb');?>
-	</div>
+	<?php the_post_thumbnail('page-thumb');?>
 	<div class="col-md-6">
 		<?php the_content();?>
 	</div>
