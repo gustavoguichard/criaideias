@@ -3,7 +3,6 @@ $(function() {
   var rootUrl = $('body').data('url');
   options.offset = 1;
   options.tag = $('body').data('tag');
-  options.lang = $('html').attr('lang');
 
   function objToQuery(obj) {
     return Object.keys(obj).reduce(function(acc, curr) {
