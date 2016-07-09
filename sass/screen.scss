@@ -225,7 +225,9 @@ aside.flags {
     }
 
     .reading-more & {
+      background-color: #222 !important;
       background-image: image-url("loading.gif");
+      color: white !important;
     }
   }
 
