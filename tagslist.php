@@ -19,15 +19,15 @@
   $tags = get_terms( 'post_tag' );
 ?>
 <ul class="tags">
-  <li><a href="<?php bloginfo('url');?>" title="Filtrar portfólio"><?=$all_t?></a></li>
+  <li><a href="<?php bloginfo('wpurl');?>" title="Filtrar portfólio"><?=$all_t?></a></li>
   <?php foreach($tags as $tag):?>
-    <li><a href="<?php bloginfo('url');?>/tag/<?=$tag->slug;?>" title="Filtrar portfólio"><?=tag_name($tag);?></a></li>
+    <li><a href="<?php bloginfo('wpurl');?>/tag/<?=$tag->slug;?>" title="Filtrar portfólio"><?=tag_name($tag);?></a></li>
   <?php endforeach;?>
   <select class="tags-select">
     <option value=""><?=$select_title?></option>
-    <option value="<?php bloginfo('url');?>"><?=$all_t?></option>
+    <option value="<?php bloginfo('wpurl');?>"><?=$all_t?></option>
     <?php foreach($tags as $tag):?>
-      <option value="<?php bloginfo('url');?>/tag/<?=$tag->slug;?>"><?=tag_name($tag);?></option>
+      <option value="<?php bloginfo('wpurl');?>/tag/<?=$tag->slug;?>"><?=tag_name($tag);?></option>
     <?php endforeach;?>
   </select>
   <span class="tags-select-title">[ <?=$select_title?> ]</span>
