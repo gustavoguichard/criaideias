@@ -15,9 +15,11 @@
 get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-	<?php the_post_thumbnail('page-thumb');?>
-  <div class="col-xs-12">
-    <?php the_content();?>
+  <div class="row">
+  	<?php the_post_thumbnail('page-thumb');?>
+    <div class="col-xs-12">
+      <?php the_content();?>
+    </div>
   </div>
 <?php endwhile; ?>
 <?php get_footer(); ?>
