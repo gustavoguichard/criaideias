@@ -28,4 +28,12 @@ $(function() {
     window.location.href = event.currentTarget.value;
   });
 
+  $('.collapsible .collapsible-title').on('click', function(event) {
+    var $collapsible = $(event.currentTarget).closest('.collapsible');
+    var $link = $('.expand-link', $collapsible)[0];
+    $collapsible.toggleClass('expanded');
+    $link.textContent = $link.textContent === '-' ? '+' : '-';
+    event.preventDefault();
+  });
+
 });

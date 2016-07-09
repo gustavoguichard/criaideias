@@ -202,7 +202,7 @@ aside.flags {
 }
 
 #main {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(white, 0.8);
   padding-top: 20px;
   padding-bottom: 120px;
   overflow: hidden;
@@ -251,7 +251,7 @@ aside.flags {
     padding-top: 15px;
 
     @media (max-width: 768px) {
-      background: rgba(0,0,0,.85);
+      background: rgba(black, .85);
       left: -200px;
       overflow: visible;
       padding-top: 0;
@@ -377,7 +377,7 @@ aside.flags {
     }
 
     @media (max-width: 768px) {
-      background: rgba(255,255,255,0.8);
+      background: rgba(white, 0.8);
       border-bottom: none;
       left: 0;
       padding: 10px;
@@ -417,7 +417,7 @@ aside.flags {
 
         .description {
           align-items: flex-end;
-          background: rgba(0,0,0,.5);
+          background: rgba(black, .5);
           bottom: 0;
           color: white;
           display: flex;
@@ -464,8 +464,76 @@ aside.flags {
 
 }
 
+.collapsible {
+  margin-bottom: 10px;
+
+  .collapsible-title, .collapsible-content {
+    background: rgba(white, .9);
+    overflow: hidden;
+    padding: 0 15px;
+  }
+
+  .section-title {
+    position: relative;
+  }
+
+  .collapsible-title {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    text-align: center;
+    text-transform: none;
+  }
+
+  .expand-link {
+    border-radius: 50%;
+    border: 2px solid #222;
+    color: #333;
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 0.5;
+    padding: 3px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+  }
+
+  &.expanded {
+    .expand-link {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .expand-link {
+      display: block;
+    }
+
+    .collapsible-title {
+      cursor: pointer;
+    }
+
+    .collapsible-content {
+      display: none;
+    }
+
+    &.expanded {
+      .collapsible-content {
+        display: block;
+      }
+    }
+  }
+
+}
+
 .menu-shadow {
-  background: rgba(0,0,0,.3);
+  background: rgba(black, .3);
   bottom: 0;
   left: 0;
   opacity: 0;
@@ -481,10 +549,8 @@ aside.flags {
   }
 }
 
-section.criadores {
+.criadores {
   position: relative;
-  margin-top: 40px;
-  min-height: 280px;
 
   a.criador_thumb, a.criador_foto {
     text-indent: -900%;
@@ -496,13 +562,14 @@ section.criadores {
   a.criador_thumb {
     width: 100px;
     height: 100px;
-    margin: 0 10px 10px 0;
+    margin: 0 6px 10px 0;
   }
   .criador_bio {
     display: none;
     h3 {
       cursor: pointer;
       margin-bottom: 0;
+      padding-bottom: 0;
       width: 90%;
     }
     article {
@@ -520,8 +587,8 @@ section.criadores {
     }
     a.close_criador {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 10px;
+      right: 30px;
       font-weight: 100;
       color: $grayLight;
       font-size: 28px;
@@ -530,7 +597,7 @@ section.criadores {
 }
 
 #footer {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(white, 0.4);
   width: 100%;
   overflow: hidden;
   position: relative;
