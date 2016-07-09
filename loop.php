@@ -5,15 +5,18 @@
 	</div>
 <?php endif; ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
-<?php $terms = get_the_terms( $post->ID, 'post_tag' );?>
-<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-<?php $client = get_post_meta($post->ID, 'client', true);?>
-<?php global $language; ?>
+<?php
+  global $language;
 
-	<div <?php post_class('portfolio-thumb'); ?> data-id="id-<?=$post->ID;?>">
-		<a class="thumb-link fancybox fancybox.iframe" href="<?php the_permalink();?>" title="<?php the_title();?>" class="iframe-single" style="background-image: url(<?=$url?>);">
-			<p class="description">
+  while ( have_posts() ) : the_post();
+  $terms = get_the_terms( $post->ID, 'post_tag' );
+  $url = wp_get_attachment_image_url( get_post_thumbnail_id($post->ID), 'thumbnail');
+  $client = get_post_meta($post->ID, 'client', true);
+?>
+
+  <div <?php post_class('portfolio-thumb'); ?> data-id="id-<?=$post->ID;?>">
+    <a class="thumb-link fancybox fancybox.iframe" href="<?php the_permalink();?>" title="<?php the_title();?>" class="iframe-single" style="background-image: url(<?=$url?>);">
+      <p class="description">
         Job: <?php the_title();?>
         <?php if($client != "") {
           $client_title = $language == 'en-US' ? 'Client' : 'Cliente';
