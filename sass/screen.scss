@@ -552,42 +552,44 @@ aside.flags {
 .criadores {
   position: relative;
 
-  a.criador_thumb, a.criador_foto {
+  .criador_thumb, .criador_foto {
     text-indent: -900%;
     overflow: hidden;
     border: 2px solid black;
     float: left;
     background-repeat: no-repeat;
   }
-  a.criador_thumb {
+
+  .criador_thumb {
     width: 100px;
     height: 100px;
     margin: 0 6px 10px 0;
   }
+
   .criador_bio {
     display: none;
+
     h3 {
       cursor: pointer;
       margin-bottom: 0;
       padding-bottom: 0;
       width: 90%;
     }
+
     article {
-      display: block;
-      height: 150px;
-      overflow-y: auto;
-      padding-bottom: 0px;
       padding-right: 10px;
     }
-    a.criador_foto {
+
+    .criador_foto {
       background-position: center top;
       width: 120px;
       height: 200px;
       margin: 0 20px 10px 0;
     }
-    a.close_criador {
+
+    .close_criador {
       position: absolute;
-      top: 10px;
+      top: 0;
       right: 30px;
       font-weight: 100;
       color: $grayLight;
