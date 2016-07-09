@@ -208,6 +208,27 @@ aside.flags {
   overflow: hidden;
   position: relative;
 
+  .read-more {
+    background: rgba(white, .9) 10px 10px no-repeat;
+    color: #222;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px auto 0;
+    max-width: 310px;
+    padding: 10px;
+    text-align: center;
+
+    &:hover {
+      background-color: rgba(white, .5);
+      text-decoration: none;
+    }
+
+    .reading-more & {
+      background-image: image-url("loading.gif");
+    }
+  }
+
   iframe {
     max-width: 100%;
   }

@@ -1,6 +1,6 @@
 $(function() {
   var options = {};
-  options.offset = 1;
+  options.offset = 0;
   options.tag = $('body').data('tag');
 
   function objToQuery(obj) {
@@ -12,12 +12,15 @@ $(function() {
   $('.read-more').on('click', function(event) {
     var $target = $(event.currentTarget);
     var url = $target.attr('href');
+    $('body').addClass('reading-more');
+    options.offset++;
+
     $.get(url + objToQuery(options), function(data) {
+      $('body').removeClass('reading-more');
       if (data.match(/post e404 col-xs-12/g)) {
         $target.remove();
       } else {
         $('#folio_container').append(data);
-        options.offset++;
       }
     });
     event.preventDefault();
