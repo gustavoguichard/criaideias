@@ -398,6 +398,10 @@ aside.flags {
       margin: 0 2px 6px;
       width: 150px;
 
+      @media (max-width: 343px) {
+        width: 130px;
+      }
+
       &:hover {
         box-shadow: 0 0 1px rgba(black, 1);
       }
