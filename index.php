@@ -2,7 +2,8 @@
 <?php get_template_part( 'tagslist', 'index' ); ?>
 
 <article id="folio_container">
-<?php query_posts(array($query_string, 'showposts'=>'-1', 'post_type'=>'post', 'orderby'=>'menu_order', 'order'=>'ASC'));?>
-<?php get_template_part( 'loop', 'index' ); ?>
+  <?php query_posts(array($query_string, 'post_type'=>'post', 'orderby'=>'menu_order', 'order'=>'ASC'));?>
+  <?php get_template_part( 'loop', 'index' ); ?>
 </article>
+<a href="#" class="read-more">carregar mais</a>
 <?php get_footer(); ?>

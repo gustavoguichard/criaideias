@@ -18,7 +18,7 @@ $language = get_bloginfo('language');
 </head>
 <?php $fundos = array('espaco', 'oceano', 'medieval', 'invaders'); shuffle($fundos); ?>
 <?php $fundo = $fundos[0]; ?>
-<body <?php body_class($fundo); ?>>
+<body <?php body_class($fundo); ?> data-url="<?php bloginfo('wpurl');?>" data-tag="<?=get_query_var('tag_id');?>">
 <div id="backgrounds">
 <?php if($fundo == 'espaco'):?>
 	<img id="img_astronauta" class="parallax_bg" src="<?php bloginfo('template_url');?>/images/espaco/astro.png" alt="Astronauta" />

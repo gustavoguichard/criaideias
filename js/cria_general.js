@@ -1,4 +1,27 @@
 $(function() {
+  var options = {};
+  var rootUrl = $('body').data('url');
+  options.offset = 1;
+  options.tag = $('body').data('tag');
+  options.lang = $('html').attr('lang');
+
+  function objToQuery(obj) {
+    return Object.keys(obj).reduce(function(acc, curr) {
+      return obj[curr] ? acc + curr + '=' + obj[curr] + '&' : acc;
+    }, '?');
+  }
+
+  $('.read-more').on('click', function(event) {
+    $.get(rootUrl + '/ajax' + objToQuery(options), function(data) {
+      if (data.match(/post e404 col-xs-12/g)) {
+        $(event.currentTarget).remove();
+      } else {
+        $('#folio_container').append(data);
+        options.offset++;
+      }
+    });
+    event.preventDefault();
+  });
 
   $(".fancybox").fancybox();
 

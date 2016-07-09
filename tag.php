@@ -3,4 +3,5 @@
 <article id="folio_container">
 <?php get_template_part( 'loop', 'index' ); ?>
 </article>
+<a href="#" class="read-more">carregar mais</a>
 <?php get_footer(); ?>
