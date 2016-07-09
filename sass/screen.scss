@@ -462,74 +462,117 @@ aside.flags {
     }
   }
 
-}
-
-.collapsible {
-  margin-bottom: 10px;
-
-  .collapsible-title, .collapsible-content {
-    background: rgba(white, .9);
-    overflow: hidden;
-    padding: 0 15px;
-  }
-
-  .section-title {
-    position: relative;
-  }
-
-  .collapsible-title {
-    font-size: 18px;
-    line-height: 1.2;
-    margin: 0;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    text-align: center;
-    text-transform: none;
-  }
-
-  .expand-link {
-    border-radius: 50%;
-    border: 2px solid #222;
-    color: #333;
-    display: none;
-    font-size: 20px;
-    font-weight: bold;
-    height: 20px;
-    line-height: 0.5;
-    padding: 3px;
-    pointer-events: none;
-    position: absolute;
-    right: 10px;
-    top: 7px;
-  }
-
-  &.expanded {
-    .expand-link {
-      padding-left: 5px;
-      padding-right: 5px;
+  .page-template-animacoes-page &, .page-template-publicacoes-page & {
+    .collapsible .collapsible-title {
+      text-align: left;
     }
   }
 
-  @media (max-width: 768px) {
-    .expand-link {
-      display: block;
+  .collapsible {
+    margin-bottom: 10px;
+
+    .collapsible-title, .collapsible-content {
+      background: rgba(white, .9);
+      overflow: hidden;
+      padding: 0 15px;
+    }
+
+    .size-page-thumb {
+      border-bottom: none;
+      cursor: pointer;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+      padding-bottom: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    .section-title {
+      position: relative;
     }
 
     .collapsible-title {
-      cursor: pointer;
+      font-size: 18px;
+      line-height: 1.2;
+      margin: 0;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      text-align: center;
+      text-transform: none;
+    }
+
+    .expand-link {
+      border-radius: 50%;
+      border: 2px solid #222;
+      color: #333;
+      display: none;
+      font-size: 20px;
+      font-weight: bold;
+      height: 20px;
+      line-height: 0.5;
+      padding: 3px;
+      pointer-events: none;
+      position: absolute;
+      right: 10px;
+      top: 7px;
     }
 
     .collapsible-content {
-      display: none;
+      p:first-child {
+        margin-top: 0;
+      }
     }
 
     &.expanded {
-      .collapsible-content {
-        display: block;
+      .expand-link {
+        padding-left: 5px;
+        padding-right: 5px;
       }
     }
-  }
 
+    &.collapsible-lg {
+      .expand-link {
+        display: block;
+      }
+
+      .collapsible-title {
+        cursor: pointer;
+      }
+
+      .collapsible-content {
+        display: none;
+      }
+
+      &.expanded {
+        .collapsible-content {
+          display: block;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .expand-link {
+        display: block;
+      }
+
+      .collapsible-title {
+        cursor: pointer;
+      }
+
+      .collapsible-content {
+        display: none;
+      }
+
+      &.expanded {
+        .collapsible-content {
+          display: block;
+        }
+      }
+    }
+
+  }
 }
 
 .menu-shadow {

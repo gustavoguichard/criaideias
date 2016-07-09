@@ -73,6 +73,72 @@ function my_cpt_init()
     'hierarchical' => false,
     'supports' => array('title', 'editor','thumbnail')
   );
+/* Animações */
+  $labelsAnimation = array(
+    'name' => 'Animações',
+    'singular_name' => 'Animação',
+    'add_new' => 'Nova Animação',
+    'add_new_item' => 'Adicionar nova Animação',
+    'edit_item' => 'Editar Animação',
+    'new_item' => 'Nova Animação',
+    'view_item' => 'Ver Animação',
+    'search_items' => 'Procurar Animação',
+    'not_found' => 'Não foram encontradas Animações',
+    'not_found_in_trash' => 'Não há Animações no lixo',
+    'parent_item_colon' => '',
+    'menu_name' => 'Animações'
+
+  );
+  $argsAnimation = array(
+    'labels' => $labelsAnimation,
+    'public' => true,
+    'publicly_queryable' => false,
+    'show_ui' => true,
+    'exclude_from_search' => true,
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-format-video',
+    'show_in_menu' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'animation', 'with_front' => false),
+    'capability_type' => 'post',
+    'has_archive' => false,
+    'hierarchical' => false,
+    'supports' => array('title', 'editor','thumbnail')
+  );
+
+  $labelsPublication = array(
+    'name' => 'Publicações',
+    'singular_name' => 'Publicação',
+    'add_new' => 'Nova Publicação',
+    'add_new_item' => 'Adicionar nova Publicação',
+    'edit_item' => 'Editar Publicação',
+    'new_item' => 'Nova Publicação',
+    'view_item' => 'Ver Publicação',
+    'search_items' => 'Procurar Publicação',
+    'not_found' => 'Não foram encontradas Publicações',
+    'not_found_in_trash' => 'Não há Publicações no lixo',
+    'parent_item_colon' => '',
+    'menu_name' => 'Publicações'
+
+  );
+  $argsPublication = array(
+    'labels' => $labelsPublication,
+    'public' => true,
+    'publicly_queryable' => false,
+    'show_ui' => true,
+    'exclude_from_search' => true,
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-media-document',
+    'show_in_menu' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'publication', 'with_front' => false),
+    'capability_type' => 'post',
+    'has_archive' => false,
+    'hierarchical' => false,
+    'supports' => array('title', 'editor','thumbnail')
+  );
+/* Publicações */
+
 /* INFO NO RODAPÉ */
   $labelsInfo = array(
     'name' => 'Informação no Rodapé',
@@ -103,6 +169,8 @@ function my_cpt_init()
   );
   register_post_type('criador',$argsCriador);
   register_post_type('footer_info',$argsInfo);
+  register_post_type('animation',$argsAnimation);
+  register_post_type('publication',$argsPublication);
   flush_rewrite_rules();
 }
 
