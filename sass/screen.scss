@@ -218,10 +218,11 @@ aside.flags {
     max-width: 310px;
     padding: 10px;
     text-align: center;
+    text-decoration: none !important;
+    transition: all .3s;
 
     &:hover {
       background-color: rgba(white, .5);
-      text-decoration: none;
     }
 
     .reading-more & {
