@@ -39,7 +39,7 @@ endif;
 
 /* CUSTOM POST TYPES */
 add_action('init', 'my_cpt_init');
-function my_cpt_init() 
+function my_cpt_init()
 {
 /* CRIADORES */
   $labelsCriador = array(
@@ -52,7 +52,7 @@ function my_cpt_init()
     'view_item' => 'Ver Criador',
     'search_items' => 'Procurar Criador',
     'not_found' => 'Não foram encontrados Criadores',
-    'not_found_in_trash' => 'Não há Criadores no lixo', 
+    'not_found_in_trash' => 'Não há Criadores no lixo',
     'parent_item_colon' => '',
     'menu_name' => 'Criadores'
 
@@ -65,11 +65,11 @@ function my_cpt_init()
     'exclude_from_search' => true,
     'menu_position' => 5,
     'menu_icon' => get_bloginfo('template_url') . '/images/icons/criador.png',
-    'show_in_menu' => true, 
+    'show_in_menu' => true,
     'query_var' => true,
     'rewrite' => array('slug' => 'portfolio', 'with_front' => false),
     'capability_type' => 'post',
-    'has_archive' => true, 
+    'has_archive' => true,
     'hierarchical' => false,
     'supports' => array('title', 'editor','thumbnail')
   );
@@ -81,7 +81,7 @@ function my_cpt_init()
     'add_new_item' => 'Adicionar nova Informação no Rodapé',
     'edit_item' => 'Editar Informação no Rodapé',
     'new_item' => 'Novo Informação no Rodapé',
-    'view_item' => 'Ver Informação no Rodapé', 
+    'view_item' => 'Ver Informação no Rodapé',
     'parent_item_colon' => '',
     'menu_name' => 'Informação no Rodapé'
 
@@ -94,10 +94,10 @@ function my_cpt_init()
     'exclude_from_search' => true,
     'menu_position' => 5,
     'menu_icon' => get_bloginfo('template_url') . '/images/icons/footer_info.png',
-    'show_in_menu' => true, 
+    'show_in_menu' => true,
     'query_var' => true,
     'capability_type' => 'post',
-    'has_archive' => true, 
+    'has_archive' => true,
     'hierarchical' => false,
     'supports' => array('title', 'editor')
   );
@@ -144,7 +144,7 @@ function editglobalcustomfields() {
 		<input type="text" name="google_analytics" id="google_analytics" value="<?php echo get_option('google_analytics');?>" />
 	</p>
 	<p><input type="submit" name="Submit" value="Salvar Alterações" /></p>
-	
+
 	<input type="hidden" name="action" value="update" />
 	<input type="hidden" name="page_options" value="google_analytics" />
 
