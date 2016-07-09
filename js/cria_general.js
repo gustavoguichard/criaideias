@@ -1,6 +1,5 @@
 $(function() {
   var options = {};
-  var rootUrl = $('body').data('url');
   options.offset = 1;
   options.tag = $('body').data('tag');
 
@@ -11,9 +10,11 @@ $(function() {
   }
 
   $('.read-more').on('click', function(event) {
-    $.get(rootUrl + '/ajax' + objToQuery(options), function(data) {
+    var $target = $(event.currentTarget);
+    var url = $target.attr('href');
+    $.get(url + objToQuery(options), function(data) {
       if (data.match(/post e404 col-xs-12/g)) {
-        $(event.currentTarget).remove();
+        $target.remove();
       } else {
         $('#folio_container').append(data);
         options.offset++;
