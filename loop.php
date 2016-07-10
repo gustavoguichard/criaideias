@@ -30,7 +30,10 @@
   $thumbs_arr = array();
   if ($images) {
     foreach ($images as $image) {
-      array_push($images_arr, wp_get_attachment_image_src( $image->ID, 'thumbnail' )[0]);
+      $image_data = wp_get_attachment_image_src( $image->ID, 'thumbnail' );
+      if(is_array($image_data)) {
+        array_push($images_arr, $image_data[0]);
+      }
     }
   }
 ?>
