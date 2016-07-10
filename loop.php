@@ -27,7 +27,6 @@
     'exclude' => $thumb_id
   ));
   $images_arr = array();
-  $thumbs_arr = array();
   if ($images) {
     foreach ($images as $image) {
       $image_data = wp_get_attachment_image_src( $image->ID, 'thumbnail' );
@@ -35,6 +34,9 @@
         array_push($images_arr, $image_data[0]);
       }
     }
+  }
+  if(count($images_arr) == 0) {
+    array_push($images_arr, $url);
   }
 ?>
 
