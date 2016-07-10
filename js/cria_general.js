@@ -1,5 +1,6 @@
 $(function() {
   var options = {};
+  var loadingUrl = $('.gallery-image', '#gallery').attr('src');
   options.offset = 0;
   options.tag = $('body').data('tag');
 
@@ -79,7 +80,9 @@ $(function() {
 
   function changeGalleryImg(image) {
     var $image = $('.gallery-image', '#gallery');
-    $image.attr('src', image.replace('-150x150.', '.'));
+    var fullImg = image.replace('-150x150.', '.');
+    $image.attr('src', loadingUrl);
+    $.get(fullImg).done(function() { $image.attr('src', fullImg); });
   }
 
   $(document).on('click', '.gallery-thumbnail', function(event) {
