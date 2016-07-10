@@ -26,8 +26,6 @@ $(function() {
     event.preventDefault();
   });
 
-  $(".fancybox").fancybox();
-
   $('.criador_thumb').on('click', function(event){
     $('.criador_thumb').hide();
     $('.criador_bio', $(this).parent()).fadeIn();

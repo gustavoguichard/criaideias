@@ -13,7 +13,6 @@ $language = get_bloginfo('language');
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link type="text/css" rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/print.css" media="print" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 <script src="<?php bloginfo('template_url');?>/js/modernizr.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <?php $fundos = array('espaco', 'oceano', 'medieval', 'invaders'); shuffle($fundos); ?>
