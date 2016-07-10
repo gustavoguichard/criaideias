@@ -599,6 +599,59 @@ aside.flags {
   }
 }
 
+#gallery {
+  background: rgba(black, .8);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+
+  .gallery-container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    overflow: auto;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .gallery-center {
+    height: 70%;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .gallery-image {
+    max-height: 100%;
+  }
+
+  .gallery-description {
+    color: white;
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  .gallery-thumbs {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    li {
+      display: inline-block;
+      margin: 0 0 5px 5px;
+      width: 80px;
+    }
+  }
+
+  .gallery-thumnail {
+    cursor: pointer;
+  }
+}
+
 .menu-shadow {
   background: rgba(black, .3);
   bottom: 0;

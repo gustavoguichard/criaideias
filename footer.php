@@ -27,6 +27,17 @@
     </div>
   </div>
 </footer><!-- //footer -->
+<aside id="gallery">
+  <div class="gallery-container">
+    <div class="gallery-center">
+      <img src="<?=get_bloginfo('template_directory')?>/images/loading.gif" class="gallery-image" />
+      <div class="gallery-footer">
+        <div class="gallery-description"></div>
+        <ul class="gallery-thumbs"></ul>
+      </div>
+    </div>
+  </div>
+</aside>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/cria_general.js"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/cria_parallax.js"></script>

@@ -10,19 +10,39 @@
 
   while ( have_posts() ) : the_post();
   $terms = get_the_terms( $post->ID, 'post_tag' );
-  $url = wp_get_attachment_image_url( get_post_thumbnail_id($post->ID), 'thumbnail');
+  $thumb_id = get_post_thumbnail_id($post->ID);
+  $url = wp_get_attachment_image_url( $thumb_id, 'thumbnail');
+
   $client = get_post_meta($post->ID, 'client', true);
+  if($client != "") {
+    $client_text = $language == 'en-US' ? 'Client: '.$client : 'Cliente: '.$client;
+  }
+
+  // Get all images from post
+  $images = get_posts( array(
+    'post_type' => 'attachment',
+    'numberposts' => -1,
+    'post_status' => null,
+    'post_parent' => $post->ID,
+    'exclude' => $thumb_id
+  ));
+  $images_arr = array();
+  $thumbs_arr = array();
+  if ($images) {
+    foreach ($images as $image) {
+      array_push($images_arr, wp_get_attachment_image_src( $image->ID, 'thumbnail' )[0]);
+    }
+  }
 ?>
 
   <div <?php post_class('portfolio-thumb'); ?> data-id="id-<?=$post->ID;?>">
-    <a class="thumb-link fancybox fancybox.iframe" href="<?php the_permalink();?>" title="<?php the_title();?>" class="iframe-single" style="background-image: url(<?=$url?>);">
+    <a class="thumb-link" href="<?php the_permalink();?>" title="<?php the_title();?>" data-images="<?=join(';', $images_arr)?>" class="iframe-single" style="background-image: url(<?=$url?>);" data-title="Job: <?php the_title();?>" data-client="<?=$client_text?>">
       <p class="description">
         Job: <?php the_title();?>
-        <?php if($client != "") {
-          $client_title = $language == 'en-US' ? 'Client' : 'Cliente';
-          echo "<br><br>".$client_title.": ".$client;
-        }?>
+        <?php if($client != ""): ?>
+          <br><br><?=$client_text?>
+        <?php endif; ?>
       </p>
-		</a>
-	</div>
+    </a>
+  </div>
 <?php endwhile; // End the loop. Whew. ?>

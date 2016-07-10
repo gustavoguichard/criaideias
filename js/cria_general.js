@@ -60,4 +60,45 @@ $(function() {
     event.preventDefault();
   });
 
+  function openGallery(info) {
+    var $gallery = $('#gallery').fadeIn();
+    var $description = $('.gallery-description', $gallery);
+    var $thumbs = $('.gallery-thumbs', $gallery);
+    var images = info.images.split(';').reverse();
+
+    var desc = info.client ? info.title + '<br>' + info.client : info.title;
+    $description.html(desc);
+
+    var imagesHtml = images.map(function(img) {
+      return '<li><img src="' + img + '" class="gallery-thumbnail" /></li>';
+    })
+    $thumbs.html(imagesHtml);
+
+    changeGalleryImg(images[0])
+  }
+
+  function changeGalleryImg(image) {
+    var $image = $('.gallery-image', '#gallery');
+    $image.attr('src', image.replace('-150x150.', '.'));
+  }
+
+  $(document).on('click', '.gallery-thumbnail', function(event) {
+    var $target = $(event.currentTarget);
+    var url = $target.attr('src');
+    changeGalleryImg(url);
+  });
+
+  $(document).on('click', '.thumb-link', function(event) {
+    var $target = $(event.currentTarget);
+    var info = $target.data();
+    openGallery(info);
+    event.preventDefault();
+  });
+
+  $('#gallery').on('click', function(event) {
+    if($(event.target).hasClass('gallery-container')) {
+      $(event.currentTarget).fadeOut();
+    }
+  });
+
 });
