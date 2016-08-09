@@ -13,15 +13,22 @@ get_header(); ?>
     <?php the_post_thumbnail('page-thumb');?>
   </div>
   <div class="row">
-    <section class="col-md-6 collapsible expanded">
-      <header class="section-title">
-        <h2 class="collapsible-title"><?php the_title();?></h2>
-        <span class="expand-link">-</span>
-      </header>
-      <div class="collapsible-content">
-        <?php the_content();?>
-      </div>
-    </section>
+  <?php
+    $reel_link = get_post_meta($post->ID, 'reel_link', true);
+
+    if(isset($reel_link) && $reel_link != "") {
+      $link_parts = explode("/", $reel_link)
+  ?>
+      <section class="col-md-6 collapsible expanded">
+        <header class="section-title">
+          <h2 class="collapsible-title">Demo Reel</h2>
+          <span class="expand-link">+</span>
+        </header>
+        <div class="collapsible-content">
+          <iframe width="560" height="290" src="https://www.youtube.com/embed/<?=end($link_parts)?>" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </section>
+  <?php }; ?>
     <section class="col-md-6 collapsible">
       <header class="section-title">
         <?php
@@ -51,23 +58,16 @@ get_header(); ?>
       </div>
     </section>
   </div>
-  <?php
-    $reel_link = get_post_meta($post->ID, 'reel_link', true);
-
-    if(isset($reel_link) && $reel_link != "") {
-      $link_parts = explode("/", $reel_link)
-  ?>
-    <div class="row">
-      <section class="col-md-6 collapsible">
-        <header class="section-title">
-          <h2 class="collapsible-title">Demo Reel</h2>
-          <span class="expand-link">+</span>
-        </header>
-        <div class="collapsible-content">
-          <iframe width="560" height="290" src="https://www.youtube.com/embed/<?=end($link_parts)?>" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </section>
-    </div>
-  <?php }; ?>
+  <div class="row">
+    <section class="col-md-6 collapsible">
+      <header class="section-title">
+        <h2 class="collapsible-title"><?php the_title();?></h2>
+        <span class="expand-link">-</span>
+      </header>
+      <div class="collapsible-content">
+        <?php the_content();?>
+      </div>
+    </section>
+  </div>
 <?php endwhile; ?>
 <?php get_footer(); ?>
