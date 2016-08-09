@@ -432,12 +432,15 @@ aside.flags {
       }
 
       .thumb-link {
-        background-position: 50% 25%;
         background-size: cover;
         display: block;
-        height: 160px;
+        height: 150px;
         overflow: hidden;
         position: relative;
+
+        @media (max-width: 343px) {
+          height: 130px;
+        }
 
         .description {
           align-items: flex-end;

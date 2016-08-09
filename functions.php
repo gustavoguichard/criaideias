@@ -2,8 +2,8 @@
 /**
  *
  * @package WordPress
- * @subpackage Gisele de Menezes
- * @since Gisele de Menezes 3.0
+ * @subpackage Cria Ideias
+ * @since Cria Ideias 3.0
  */
 
 
