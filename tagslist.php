@@ -1,6 +1,8 @@
 <?php
   global $language;
 
+  $tag_title = single_tag_title("", false);
+  $is_tag = $tag_title != "";
   if($language == 'en-US') {
     $all_t = 'All';
     $select_title = 'select';
@@ -24,11 +26,13 @@
     <li><a href="<?php bloginfo('wpurl');?>/tag/<?=$tag->slug;?>" title="Filtrar portfólio"><?=tag_name($tag);?></a></li>
   <?php endforeach;?>
   <select class="tags-select">
-    <option value=""><?=$select_title?></option>
-    <option value="<?php bloginfo('wpurl');?>"><?=$all_t?></option>
+    <option value="<?php bloginfo('wpurl');?>"><?=$is_tag ? $all_t : $select_title ?></option>
     <?php foreach($tags as $tag):?>
-      <option value="<?php bloginfo('wpurl');?>/tag/<?=$tag->slug;?>"><?=tag_name($tag);?></option>
+      <option
+        value="<?php bloginfo('wpurl');?>/tag/<?=$tag->slug;?>"
+        <?php if($tag->name == $tag_title) { echo "selected"; }?>
+      ><?=tag_name($tag);?></option>
     <?php endforeach;?>
   </select>
-  <span class="tags-select-title">[ <?=$select_title?> ]</span>
+  <span class="tags-select-title">[ <?=$is_tag ? $tag_title : $select_title?> ]</span>
 </ul>
