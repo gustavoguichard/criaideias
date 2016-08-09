@@ -333,7 +333,7 @@ aside.flags {
   }
 
   .mobile-menu-link {
-    background: image-url("menu-icon-white.png") no-repeat center;
+    background: rgba(black, .85) image-url("menu-icon-white.png") no-repeat center;
     display: none;
 
     @media (max-width: 768px) {
@@ -351,6 +351,7 @@ aside.flags {
     }
 
     .menu-open & {
+      background-color: transparent;
       bottom: 5px;
       right: 10px;
       top: auto;
