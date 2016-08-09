@@ -4,13 +4,13 @@
   $tag_title = single_tag_title("", false);
   $is_tag = $tag_title != "";
   if($language == 'en-US') {
-    $all_t = 'All';
+    $all_t = 'all';
     $select_title = 'select';
   } elseif($language == 'es-ES') {
-    $all_t = 'Todo';
+    $all_t = 'todo';
     $select_title = 'seleccionar';
   } else {
-    $all_t = 'Tudo';
+    $all_t = 'tudo';
     $select_title = 'selecione';
   }
 
