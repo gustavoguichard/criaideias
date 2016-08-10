@@ -112,6 +112,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/collapse-bts.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2832,
+		"inputAbbreviatedPath": "\/images\/collapse-bts.png",
+		"outputAbbreviatedPath": "\/images\/collapse-bts.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/espaco\/astro.png": {
 		"fileType": 32768,
 		"ignore": 0,

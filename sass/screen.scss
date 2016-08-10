@@ -532,19 +532,15 @@ aside.flags {
     }
 
     .expand-link {
-      border-radius: 50%;
-      border: 2px solid #222;
-      color: #333;
+      background: image-url("collapse-bts.png") no-repeat left center;
+      background-size: cover;
       display: none;
-      font-size: 20px;
-      font-weight: bold;
       height: 20px;
-      line-height: 0.5;
-      padding: 3px;
+      width: 20px;
       pointer-events: none;
       position: absolute;
       right: 10px;
-      top: 7px;
+      top: 10px;
     }
 
     .collapsible-content {
@@ -555,8 +551,7 @@ aside.flags {
 
     &.expanded {
       .expand-link {
-        padding-left: 5px;
-        padding-right: 5px;
+        background-position: right center;
       }
     }
 

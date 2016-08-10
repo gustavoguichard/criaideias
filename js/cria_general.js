@@ -55,9 +55,7 @@ $(function() {
 
   $('.collapsible-title, .size-page-thumb', '.collapsible').on('click', function(event) {
     var $collapsible = $(event.currentTarget).closest('.collapsible');
-    var $link = $('.expand-link', $collapsible)[0];
     $collapsible.toggleClass('expanded');
-    $link.textContent = $link.textContent === '-' ? '+' : '-';
     event.preventDefault();
   });
 
@@ -72,10 +70,10 @@ $(function() {
 
     var imagesHtml = images.map(function(img) {
       return '<li><img src="' + img + '" class="gallery-thumbnail" /></li>';
-    })
+    });
     $thumbs.html(imagesHtml);
 
-    changeGalleryImg(images[0])
+    changeGalleryImg(images[0]);
   }
 
   function changeGalleryImg(image) {

@@ -23,7 +23,7 @@ get_header(); ?>
         <?php the_post_thumbnail('page-thumb'); ?>
         <header class="section-title">
           <h2 class="collapsible-title"><?php the_title();?></h2>
-          <span class="expand-link">+</span>
+          <span class="expand-link"></span>
         </header>
         <div class="collapsible-content">
           <?php the_content();?>

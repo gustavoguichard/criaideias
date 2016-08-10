@@ -22,7 +22,7 @@ get_header(); ?>
       <section class="col-md-6 collapsible expanded">
         <header class="section-title">
           <h2 class="collapsible-title">Demo Reel</h2>
-          <span class="expand-link">+</span>
+          <span class="expandlink">+</span>
         </header>
         <div class="collapsible-content">
           <iframe width="560" height="290" src="https://www.youtube.com/embed/<?=end($link_parts)?>" frameborder="0" allowfullscreen></iframe>
@@ -36,7 +36,7 @@ get_header(); ?>
           $sec_title = $language == 'en-US' ? 'Team' : $language == 'es-ES' ? 'Equipo' : 'Equipe';
         ?>
         <h2 class="collapsible-title"><?=$sec_title?></h2>
-        <span class="expand-link">+</span>
+        <span class="expand-link"></span>
       </header>
       <div class="collapsible-content criadores">
         <?php $my_query = new WP_Query('showposts=-1&post_type=criador&orderby=menu_order&order=ASC'); ?>
@@ -62,7 +62,7 @@ get_header(); ?>
     <section class="col-md-6 collapsible">
       <header class="section-title">
         <h2 class="collapsible-title"><?php the_title();?></h2>
-        <span class="expand-link">-</span>
+        <span class="expand-link"></span>
       </header>
       <div class="collapsible-content">
         <?php the_content();?>
