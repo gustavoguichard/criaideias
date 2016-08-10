@@ -22,7 +22,7 @@ get_header(); ?>
       <section class="col-md-6 collapsible expanded">
         <header class="section-title">
           <h2 class="collapsible-title">Demo Reel</h2>
-          <span class="expandlink">+</span>
+          <span class="expand-link"></span>
         </header>
         <div class="collapsible-content">
           <iframe width="560" height="290" src="https://www.youtube.com/embed/<?=end($link_parts)?>" frameborder="0" allowfullscreen></iframe>
