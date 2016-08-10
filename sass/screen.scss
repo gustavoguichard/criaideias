@@ -633,6 +633,10 @@ aside.flags {
     margin-bottom: -24px;
     position: relative;
     top: -24px;
+
+    iframe {
+      max-width: 100%;
+    }
   }
 
   .gallery-description {
