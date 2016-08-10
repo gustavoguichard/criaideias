@@ -706,6 +706,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/play-bt.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2676,
+		"inputAbbreviatedPath": "\/images\/play-bt.png",
+		"outputAbbreviatedPath": "\/images\/play-bt.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/spain-flag.png": {
 		"fileType": 32768,
 		"ignore": 0,

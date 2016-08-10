@@ -31,6 +31,7 @@
   <div class="gallery-container">
     <div class="gallery-center">
       <img src="<?=get_bloginfo('template_directory')?>/images/loading.gif" class="gallery-image" />
+      <div class="gallery-player" style="display: none;"></div>
       <div class="gallery-footer">
         <div class="gallery-description"></div>
         <ul class="gallery-thumbs"></ul>

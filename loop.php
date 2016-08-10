@@ -14,6 +14,7 @@
   $url = wp_get_attachment_image_url( $thumb_id, 'thumbnail');
 
   $client = get_post_meta($post->ID, 'client', true);
+  $video = get_post_meta($post->ID, 'youtube', true);
   if($client != "") {
     $client_text = $language == 'en-US' ? 'Client: '.$client : 'Cliente: '.$client;
   }
@@ -41,7 +42,7 @@
 ?>
 
   <div <?php post_class('portfolio-thumb'); ?> data-id="id-<?=$post->ID;?>">
-    <a class="thumb-link" href="<?php the_permalink();?>" title="<?php the_title();?>" data-images="<?=join(';', $images_arr)?>" class="iframe-single" style="background-image: url(<?=$url?>);" data-title="Job: <?php the_title();?>" data-client="<?=$client_text?>">
+    <a class="thumb-link" href="<?php the_permalink();?>" title="<?php the_title();?>" data-images="<?=join(';', $images_arr)?>" class="iframe-single" style="background-image: url(<?=$url?>);" data-title="Job: <?php the_title();?>" data-client="<?=$client_text?>" data-video="<?=$video?>" data-playurl="<?=get_bloginfo('template_directory')?>/images/play-bt.png">
       <p class="description">
         Job: <?php the_title();?>
         <?php if($client != ""): ?>

@@ -10,6 +10,19 @@ $(function() {
     }, '?');
   }
 
+  function contains(substring, string) {
+    return string.indexOf(substring) !== -1;
+  }
+
+  function isVideo(string) {
+    return contains('//youtu.be/', string);
+  }
+
+  function last(array) {
+    var size = array.length;
+    return array[size - 1];
+  }
+
   $('.read-more').on('click', function(event) {
     var $target = $(event.currentTarget);
     var url = $target.attr('href');
@@ -60,16 +73,21 @@ $(function() {
   });
 
   function openGallery(info) {
+    var isntEmpty = function(el) { return !!el; };
+
     var $gallery = $('#gallery').fadeIn();
     var $description = $('.gallery-description', $gallery);
     var $thumbs = $('.gallery-thumbs', $gallery);
-    var images = info.images.split(';').reverse();
+    var imagesUnfiltered = [].concat(info.video, info.images.split(';').reverse());
+    var images = imagesUnfiltered.filter(isntEmpty);
 
     var desc = info.client ? info.title + '<br>' + info.client : info.title;
     $description.html(desc);
 
     var imagesHtml = images.map(function(img) {
-      return '<li><img src="' + img + '" class="gallery-thumbnail" /></li>';
+      return isVideo(img) ?
+        '<li><img src="' + info.playurl + '" data-url="' + img + '" class="gallery-video" /></li>'
+        : '<li><img src="' + img + '" class="gallery-thumbnail" /></li>';
     });
     $thumbs.html(imagesHtml);
 
@@ -78,14 +96,28 @@ $(function() {
 
   function changeGalleryImg(image) {
     var $image = $('.gallery-image', '#gallery');
-    var fullImg = image.replace('-150x150.', '.');
+    var $video = $('.gallery-player', '#gallery');
     $image.attr('src', loadingUrl);
-    $.get(fullImg).done(function() { $image.attr('src', fullImg); });
+    $video.html('').hide();
+    if(isVideo(image)) {
+      var videoId = last(image.split('/'));
+      var embedCode = '<iframe width="560" height="290" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></iframe>';
+      $video.html(embedCode).show();
+    } else {
+      var fullImg = image.replace('-150x150.', '.');
+      $.get(fullImg).done(function() { $image.attr('src', fullImg); });
+    }
   }
 
   $(document).on('click', '.gallery-thumbnail', function(event) {
     var $target = $(event.currentTarget);
     var url = $target.attr('src');
+    changeGalleryImg(url);
+  });
+
+  $(document).on('click', '.gallery-video', function(event) {
+    var $target = $(event.currentTarget);
+    var url = $target.data('url');
     changeGalleryImg(url);
   });
 
