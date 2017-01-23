@@ -46,7 +46,7 @@ $(function() {
     event.preventDefault();
   });
 
-  $('.criador_bio a.criador_foto, .criador_bio a.close_criador, .criador_bio h3').on('click', function(event){
+  $('a.criador_foto, a.close_criador, h3', '.criador_bio').on('click', function(event){
     $(this).parents('.criador_bio').hide();
     $('.criador_thumb').fadeIn();
     event.preventDefault();

@@ -24,6 +24,7 @@
     'post_type' => 'attachment',
     'numberposts' => -1,
     'post_status' => null,
+    'lang' => $language,
     'post_parent' => $post->ID,
     'exclude' => $thumb_id
   ));
