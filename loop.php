@@ -19,15 +19,18 @@
     $client_text = $language == 'en-US' ? 'Client: '.$client : 'Cliente: '.$client;
   }
 
+  $postID = pll_get_post($post->ID, 'pt_BR');
+
   // Get all images from post
   $images = get_posts( array(
     'post_type' => 'attachment',
     'numberposts' => -1,
     'post_status' => null,
-    'lang' => $language,
-    'post_parent' => $post->ID,
+    'lang' => '',
+    'post_parent' => $postID,
     'exclude' => $thumb_id
   ));
+
   $images_arr = array();
   if ($images) {
     foreach ($images as $image) {
