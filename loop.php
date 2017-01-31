@@ -27,8 +27,8 @@
     'numberposts' => -1,
     'post_status' => null,
     'lang' => '',
-    'post_parent' => $postID,
-    'exclude' => $thumb_id
+    'post_parent' => $postID
+    // 'exclude' => $thumb_id
   ));
 
   $images_arr = array();
