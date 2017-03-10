@@ -33,7 +33,13 @@ get_header(); ?>
       <header class="section-title">
         <?php
           global $language;
-          $sec_title = ($language == 'en-US') ? 'Team' : ($language == 'es-ES') ? 'Equipo' : 'Equipe';
+          $sec_title = 'Equipe';
+          if($language == 'en-US') {
+            $sec_title = 'Team';
+          }
+          if($language == 'es-ES') {
+            $sec_title = 'Equipo';
+          }
         ?>
         <h2 class="collapsible-title"><?=$sec_title?></h2>
         <span class="expand-link"></span>
