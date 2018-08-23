@@ -23,6 +23,10 @@ $(function() {
     return array[size - 1];
   }
 
+  function isFunction(obj) {
+    return !!(obj && obj.constructor && obj.call && obj.apply);
+  }
+
   $('.read-more').on('click', function(event) {
     var $target = $(event.currentTarget);
     var url = $target.attr('href');
@@ -127,6 +131,15 @@ $(function() {
     openGallery(info);
     event.preventDefault();
   });
+
+  function sendForm() {
+    if (typeof ga !== 'undefined' && isFunction(ga)) {
+      ga('send', 'event', 'botao', 'clique', 'enviar');
+    }
+  }
+
+  $(document).on('click', '.wpcf7-submit', sendForm);
+  $(document).on('submit', '.wpcf7-form', sendForm);
 
   $('#gallery').on('click', function(event) {
     if($(event.target).hasClass('gallery-container')) {
