@@ -5,5 +5,4 @@
   <?php query_posts(array($query_string, 'post_type'=>'post', 'orderby'=>'menu_order', 'order'=>'ASC'));?>
   <?php get_template_part( 'loop', 'index' ); ?>
 </article>
-<?php get_template_part( 'read-more', 'index' ); ?>
 <?php get_footer(); ?>
