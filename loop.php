@@ -32,7 +32,7 @@
     'post_parent' => $postID,
     'exclude' => $thumb_id,
     'orderby' => 'menu_order',
-    'order'=>'ASC'
+    'order'=>'DESC'
   ));
 
   $images_arr = array();
