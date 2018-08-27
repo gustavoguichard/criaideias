@@ -17,6 +17,8 @@
   $video = get_post_meta($post->ID, 'youtube', true);
   if($client != "") {
     $client_text = $language == 'en-US' ? 'Client: '.$client : 'Cliente: '.$client;
+  } else {
+    $client_text = "";
   }
 
   $postID = pll_get_post($post->ID, 'pt_BR');
@@ -50,7 +52,7 @@
       <p class="description">
         Job: <?php the_title();?>
         <?php if($client != ""): ?>
-          <br><br><?=$client_text?>
+          <br><?=$client_text?>
         <?php endif; ?>
       </p>
     </a>
