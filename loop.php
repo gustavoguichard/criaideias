@@ -30,7 +30,9 @@
     'post_status' => null,
     'lang' => '',
     'post_parent' => $postID,
-    'exclude' => $thumb_id
+    'exclude' => $thumb_id,
+    'orderby' => 'menu_order',
+    'order'=>'ASC'
   ));
 
   $images_arr = array();
